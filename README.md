@@ -7,8 +7,19 @@ How it's made:
 
 -And pure utilization of quarentine :D
 # Screenshots
+
 ![](login-screenshot.PNG)
-![](Profile-screenshot.PNG)
-![](Admission-screenshot.PNG)
+
 ![](Home-screenshot.PNG)
-![](Search-screenshot.PNG
+
+![](Status-screenshot.PNG)
+
+![](Admission-screenshot.PNG)
+
+![](Attendance-screenshot.PNG)
+
+![](Search-screenshot.PNG)
+
+![](Profile-screenshot.PNG)
+
+
