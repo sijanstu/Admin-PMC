@@ -10,7 +10,7 @@ How it's made:
 
 ![](login-screenshot.PNG)
 
-![](Home-screenshot.PNG)
+![](Home-Screenshot.PNG)
 
 ![](Status-screenshot.PNG)
 
