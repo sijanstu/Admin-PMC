@@ -2,7 +2,8 @@
 Sample Management App made with java
 # Only for Educational purpose
 
-#Screenshots
+# Screenshots
+
 ![](login-screenshot.PNG)
 
 ![](Home-Screenshot.PNG)
