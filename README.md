@@ -1,11 +1,9 @@
 # Admin-PMC
 Sample Management App made with java
 # Only for Educational purpose
-How it's made:
 
--All logic are applied manually
+-Stay home Project
 
--And pure utilization of quarentine :D
 # Screenshots
 
 ![](login-screenshot.PNG)
