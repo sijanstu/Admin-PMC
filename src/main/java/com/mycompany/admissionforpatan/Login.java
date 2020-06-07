@@ -155,7 +155,9 @@ public class Login extends javax.swing.JFrame {
         un2 = new javax.swing.JLabel();
         position = new javax.swing.JTextField();
         pob1 = new javax.swing.JSeparator();
+        Splash = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         neterror = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -228,7 +230,7 @@ public class Login extends javax.swing.JFrame {
                 fpbMouseClicked(evt);
             }
         });
-        jPanel2.add(fpb, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 320, 40));
+        jPanel2.add(fpb, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 320, 40));
 
         sbutton.setBackground(new java.awt.Color(0, 0, 204));
         sbutton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -239,16 +241,16 @@ public class Login extends javax.swing.JFrame {
                 sbuttonActionPerformed(evt);
             }
         });
-        jPanel2.add(sbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 240, -1, -1));
+        jPanel2.add(sbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 250, -1, -1));
 
         err.setForeground(new java.awt.Color(255, 0, 0));
         jPanel2.add(err, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 150, 160, 10));
 
         errs.setForeground(new java.awt.Color(255, 0, 0));
-        jPanel2.add(errs, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, 100, 20));
+        jPanel2.add(errs, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 230, 100, 20));
 
         errp.setForeground(new java.awt.Color(255, 0, 0));
-        jPanel2.add(errp, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, 160, 20));
+        jPanel2.add(errp, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 160, 20));
 
         chkib.setBackground(new java.awt.Color(0, 0, 204));
         chkib.setForeground(new java.awt.Color(0, 0, 255));
@@ -279,7 +281,7 @@ public class Login extends javax.swing.JFrame {
                 fpb1MouseClicked(evt);
             }
         });
-        jPanel2.add(fpb1, new org.netbeans.lib.awtextra.AbsoluteConstraints(86, 340, 120, 40));
+        jPanel2.add(fpb1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, 90, 40));
 
         labelname.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         labelname.setForeground(new java.awt.Color(255, 255, 255));
@@ -307,6 +309,16 @@ public class Login extends javax.swing.JFrame {
         jPanel2.add(position, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 70, 160, 30));
         jPanel2.add(pob1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 100, 160, 10));
 
+        Splash.setBackground(new java.awt.Color(0, 0, 204));
+        Splash.setForeground(new java.awt.Color(0, 0, 255));
+        Splash.setText("Call splash screen");
+        Splash.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SplashActionPerformed(evt);
+            }
+        });
+        jPanel2.add(Splash, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, -1, -1));
+
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, 320, 380));
 
         jLabel7.setBackground(new java.awt.Color(0, 0, 255));
@@ -314,6 +326,16 @@ public class Login extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(51, 51, 255));
         jLabel7.setText("Patan Multiple Campus");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, -1));
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel1.setText("X");
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 20, 40));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -457,9 +479,26 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
         fpb.setText("Go to C:\\Patan_APP\\Admin-control-settings");
     }//GEN-LAST:event_fpb1MouseClicked
+
+    private void SplashActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SplashActionPerformed
+        // TODO add your handling code here:
+        Splash sp=new Splash();
+        String ss[]=new String[100];
+        com.mycompany.admissionforpatan.Splash.main(ss);
+        dispose();
+    }//GEN-LAST:event_SplashActionPerformed
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        dispose();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel1MouseClicked
     /**
      * @param args the command line arguments
      */
+    public void maincall()
+    {
+        main();
+    }
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
 
@@ -488,12 +527,14 @@ public class Login extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Splash;
     private javax.swing.JButton chkib;
     private javax.swing.JLabel err;
     private javax.swing.JLabel errp;
     private javax.swing.JLabel errs;
     private javax.swing.JLabel fpb;
     private javax.swing.JLabel fpb1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel7;

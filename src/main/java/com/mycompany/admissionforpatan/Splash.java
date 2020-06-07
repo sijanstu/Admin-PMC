@@ -17,17 +17,14 @@ public class Splash extends javax.swing.JFrame {
 
     /**
      * Creates new form Splash
-     * @throws java.lang.InterruptedException
      */
-    public Splash(){
+    public Splash() {
         initComponents();
         sp1.setVisible(false);
         sp2.setVisible(false);
         sp3.setVisible(false);
         sp4.setVisible(false);
         logo.setVisible(false);
-        
-        
     }
 
     /**
@@ -59,6 +56,8 @@ public class Splash extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.addContainerListener(new java.awt.event.ContainerAdapter() {
@@ -95,7 +94,9 @@ public class Splash extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 45, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -109,26 +110,29 @@ public class Splash extends javax.swing.JFrame {
 
     private void jPanel1ComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_jPanel1ComponentAdded
         // TODO add your handling code here:
-        Timer tm=new Timer();
-        synchronized(tm){
+        Timer tm = new Timer();
+        synchronized (tm) {
             try {
-                tm.wait(2000);
-                new animator(a);a++;
+                try {
+                    tm.wait(2000);
+                    new animator(a);
+                    a++;
+                } catch (InterruptedException ex) {
+                    Logger.getLogger(Splash.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                tm.wait(3000);
+                setVisible(false);
+                Login lo=new Login();
+                lo.main();
             } catch (InterruptedException ex) {
                 Logger.getLogger(Splash.class.getName()).log(Level.SEVERE, null, ex);
             }
+
         }
     }//GEN-LAST:event_jPanel1ComponentAdded
-int a=1;
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+    int a = 1;
+    public static void main(String[] args) {
+        
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -136,23 +140,16 @@ int a=1;
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Splash.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Splash.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Splash.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Splash.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
+        //</editor-fold>
+
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new Splash().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new Splash().setVisible(true);
         });
     }
 
@@ -165,27 +162,28 @@ int a=1;
     private javax.swing.JSeparator sp3;
     private javax.swing.JSeparator sp4;
     // End of variables declaration//GEN-END:variables
-class animator{
-    public animator(int ds){
-        switch(ds){
-            case 1:
-                sp1.setVisible(true);
-                break;
-            case 2:
-                sp2.setVisible(true);
-                break;
-            case 3:
-                sp3.setVisible(true);
-                break;
-            case 4:
-                sp4.setVisible(true);
-                break;
-            case 5:
-                logo.setVisible(true);
-                break;
-            default:
-                break;
+class animator {
+
+        public animator(int ds) {
+            switch (ds) {
+                case 1:
+                    sp1.setVisible(true);
+                    break;
+                case 2:
+                    sp2.setVisible(true);
+                    break;
+                case 3:
+                    sp3.setVisible(true);
+                    break;
+                case 4:
+                    sp4.setVisible(true);
+                    break;
+                case 5:
+                    logo.setVisible(true);
+                    break;
+                default:
+                    break;
+            }
         }
     }
-}
 }
