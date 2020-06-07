@@ -38,6 +38,14 @@ public class Chooser_home extends javax.swing.JFrame {
         bckbtn.setIcon(img6);
         ImageIcon img7 = new ImageIcon("src\\main\\icons\\frontbt.png");
         frbt.setIcon(img7);
+        ImageIcon img8 = new ImageIcon("src\\main\\icons\\allok.png");
+        frbt1.setIcon(img8);
+        ImageIcon img9 = new ImageIcon("src\\main\\icons\\allok.png");
+        frbt4.setIcon(img9);
+        ImageIcon img10 = new ImageIcon("src\\main\\icons\\allok.png");
+        frbt5.setIcon(img10);
+        
+        
 
     }
 
@@ -65,23 +73,29 @@ public class Chooser_home extends javax.swing.JFrame {
         jSeparator25 = new javax.swing.JSeparator();
         jSeparator24 = new javax.swing.JSeparator();
         p1 = new javax.swing.JPanel();
+        frbt3 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         p2 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
+        frbt1 = new javax.swing.JLabel();
         p4 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
+        frbt4 = new javax.swing.JLabel();
         p6 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
+        frbt6 = new javax.swing.JLabel();
         p7 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
+        frbt2 = new javax.swing.JLabel();
         p5 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
+        frbt5 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         bckbtn = new javax.swing.JLabel();
         frbt = new javax.swing.JLabel();
@@ -152,6 +166,20 @@ public class Chooser_home extends javax.swing.JFrame {
             }
         });
         p1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        frbt3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Programming-learning\\Documents\\NetBeansProjects\\AdmissionforPatan\\src\\main\\icons\\bug_filled_50px.png")); // NOI18N
+        frbt3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                frbt3MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                frbt3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                frbt3MouseExited(evt);
+            }
+        });
+        p1.add(frbt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, -1, -1));
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("Sylfaen", 0, 24)); // NOI18N
@@ -235,6 +263,20 @@ public class Chooser_home extends javax.swing.JFrame {
         p2.add(jLabel10);
         jLabel10.setBounds(80, 0, 160, 140);
 
+        frbt1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                frbt1MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                frbt1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                frbt1MouseExited(evt);
+            }
+        });
+        p2.add(frbt1);
+        frbt1.setBounds(10, 20, 50, 50);
+
         jPanel1.add(p2, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 49, 220, 120));
 
         p4.setBackground(new java.awt.Color(255, 255, 255));
@@ -260,6 +302,20 @@ public class Chooser_home extends javax.swing.JFrame {
         p4.add(jLabel11);
         jLabel11.setBounds(68, 0, 120, 120);
 
+        frbt4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                frbt4MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                frbt4MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                frbt4MouseExited(evt);
+            }
+        });
+        p4.add(frbt4);
+        frbt4.setBounds(10, 20, 50, 50);
+
         jPanel1.add(p4, new org.netbeans.lib.awtextra.AbsoluteConstraints(464, 49, 190, 120));
 
         p6.setBackground(new java.awt.Color(255, 255, 255));
@@ -279,6 +335,20 @@ public class Chooser_home extends javax.swing.JFrame {
         jLabel7.setText("Notices");
         p6.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
         p6.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 170, 120));
+
+        frbt6.setIcon(new javax.swing.ImageIcon("C:\\Users\\Programming-learning\\Documents\\NetBeansProjects\\AdmissionforPatan\\src\\main\\icons\\bug_filled_50px.png")); // NOI18N
+        frbt6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                frbt6MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                frbt6MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                frbt6MouseExited(evt);
+            }
+        });
+        p6.add(frbt6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, -1));
 
         jPanel1.add(p6, new org.netbeans.lib.awtextra.AbsoluteConstraints(4, 176, 220, 160));
 
@@ -325,6 +395,20 @@ public class Chooser_home extends javax.swing.JFrame {
             }
         });
         p7.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, 140, 130));
+
+        frbt2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Programming-learning\\Documents\\NetBeansProjects\\AdmissionforPatan\\src\\main\\icons\\bug_filled_50px.png")); // NOI18N
+        frbt2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                frbt2MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                frbt2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                frbt2MouseExited(evt);
+            }
+        });
+        p7.add(frbt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, -1));
 
         jPanel1.add(p7, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 176, 220, 160));
 
@@ -374,6 +458,19 @@ public class Chooser_home extends javax.swing.JFrame {
         });
         p5.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 150, 120));
 
+        frbt5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                frbt5MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                frbt5MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                frbt5MouseExited(evt);
+            }
+        });
+        p5.add(frbt5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 50, 50));
+
         jPanel1.add(p5, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 180, -1, 150));
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 255));
@@ -406,7 +503,7 @@ public class Chooser_home extends javax.swing.JFrame {
                 frbtMouseExited(evt);
             }
         });
-        jPanel1.add(frbt, new org.netbeans.lib.awtextra.AbsoluteConstraints(616, 0, 40, 30));
+        jPanel1.add(frbt, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 0, 40, 30));
 
         jSeparator22.setBackground(new java.awt.Color(0, 0, 255));
         jSeparator22.setForeground(new java.awt.Color(0, 0, 255));
@@ -699,6 +796,78 @@ public class Chooser_home extends javax.swing.JFrame {
         Search.search("");
     }//GEN-LAST:event_p4MouseClicked
 
+    private void frbt1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_frbt1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_frbt1MouseClicked
+
+    private void frbt1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_frbt1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_frbt1MouseEntered
+
+    private void frbt1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_frbt1MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_frbt1MouseExited
+
+    private void frbt2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_frbt2MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_frbt2MouseClicked
+
+    private void frbt2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_frbt2MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_frbt2MouseEntered
+
+    private void frbt2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_frbt2MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_frbt2MouseExited
+
+    private void frbt3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_frbt3MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_frbt3MouseClicked
+
+    private void frbt3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_frbt3MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_frbt3MouseEntered
+
+    private void frbt3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_frbt3MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_frbt3MouseExited
+
+    private void frbt4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_frbt4MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_frbt4MouseClicked
+
+    private void frbt4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_frbt4MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_frbt4MouseEntered
+
+    private void frbt4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_frbt4MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_frbt4MouseExited
+
+    private void frbt5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_frbt5MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_frbt5MouseClicked
+
+    private void frbt5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_frbt5MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_frbt5MouseEntered
+
+    private void frbt5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_frbt5MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_frbt5MouseExited
+
+    private void frbt6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_frbt6MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_frbt6MouseClicked
+
+    private void frbt6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_frbt6MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_frbt6MouseEntered
+
+    private void frbt6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_frbt6MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_frbt6MouseExited
+
     /**
      * //@param args the command line arguments
      *
@@ -738,6 +907,12 @@ public class Chooser_home extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel bckbtn;
     private javax.swing.JLabel frbt;
+    private javax.swing.JLabel frbt1;
+    private javax.swing.JLabel frbt2;
+    private javax.swing.JLabel frbt3;
+    private javax.swing.JLabel frbt4;
+    private javax.swing.JLabel frbt5;
+    private javax.swing.JLabel frbt6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

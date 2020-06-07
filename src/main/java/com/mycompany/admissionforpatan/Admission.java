@@ -14,6 +14,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -26,6 +27,8 @@ public class Admission extends javax.swing.JFrame {
      */
     public Admission() {
         initComponents();
+        ImageIcon img=new ImageIcon("src\\main\\icons\\admission.png");
+        setIconImage(img.getImage());
     }
 
     /**
@@ -50,11 +53,13 @@ public class Admission extends javax.swing.JFrame {
         jLabel29 = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
         jLabel30 = new javax.swing.JLabel();
+        jSeparator45 = new javax.swing.JSeparator();
         jSeparator5 = new javax.swing.JSeparator();
         sname = new javax.swing.JTextField();
         others = new javax.swing.JTextField();
         sdepart = new javax.swing.JTextField();
         sparentname = new javax.swing.JTextField();
+        jSeparator46 = new javax.swing.JSeparator();
         jButton2 = new javax.swing.JButton();
         errs = new javax.swing.JLabel();
         fselect = new javax.swing.JComboBox<>();
@@ -63,6 +68,8 @@ public class Admission extends javax.swing.JFrame {
         jSeparator60 = new javax.swing.JSeparator();
         jSeparator61 = new javax.swing.JSeparator();
         jSeparator62 = new javax.swing.JSeparator();
+        jSeparator44 = new javax.swing.JSeparator();
+        jSeparator47 = new javax.swing.JSeparator();
         jPanel11 = new javax.swing.JPanel();
         jLabel32 = new javax.swing.JLabel();
         jSeparator12 = new javax.swing.JSeparator();
@@ -83,8 +90,8 @@ public class Admission extends javax.swing.JFrame {
         jSeparator56 = new javax.swing.JSeparator();
         jSeparator41 = new javax.swing.JSeparator();
         jSeparator43 = new javax.swing.JSeparator();
-        subtea = new javax.swing.JButton();
         jSeparator42 = new javax.swing.JSeparator();
+        subtea = new javax.swing.JButton();
         jSeparator57 = new javax.swing.JSeparator();
         jSeparator58 = new javax.swing.JSeparator();
         jSeparator50 = new javax.swing.JSeparator();
@@ -160,6 +167,11 @@ public class Admission extends javax.swing.JFrame {
         jPanel9.add(jLabel30);
         jLabel30.setBounds(8, 140, 90, 17);
 
+        jSeparator45.setBackground(new java.awt.Color(0, 0, 255));
+        jSeparator45.setForeground(new java.awt.Color(0, 0, 255));
+        jPanel9.add(jSeparator45);
+        jSeparator45.setBounds(120, 210, 110, 10);
+
         jSeparator5.setForeground(new java.awt.Color(0, 0, 255));
         jPanel9.add(jSeparator5);
         jSeparator5.setBounds(100, 160, 230, 10);
@@ -193,6 +205,12 @@ public class Admission extends javax.swing.JFrame {
         jPanel9.add(sparentname);
         sparentname.setBounds(100, 130, 230, 30);
 
+        jSeparator46.setBackground(new java.awt.Color(0, 0, 255));
+        jSeparator46.setForeground(new java.awt.Color(0, 0, 255));
+        jSeparator46.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel9.add(jSeparator46);
+        jSeparator46.setBounds(130, 210, 20, 40);
+
         jButton2.setBackground(new java.awt.Color(255, 255, 255));
         jButton2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(0, 0, 255));
@@ -203,12 +221,12 @@ public class Admission extends javax.swing.JFrame {
             }
         });
         jPanel9.add(jButton2);
-        jButton2.setBounds(140, 220, 80, 30);
+        jButton2.setBounds(130, 210, 90, 40);
 
         errs.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         errs.setForeground(new java.awt.Color(51, 51, 255));
         jPanel9.add(errs);
-        errs.setBounds(110, 300, 160, 30);
+        errs.setBounds(230, 210, 110, 40);
 
         fselect.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
         fselect.setForeground(new java.awt.Color(0, 0, 255));
@@ -250,6 +268,18 @@ public class Admission extends javax.swing.JFrame {
         jSeparator62.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPanel9.add(jSeparator62);
         jSeparator62.setBounds(340, 0, 10, 250);
+
+        jSeparator44.setBackground(new java.awt.Color(0, 0, 255));
+        jSeparator44.setForeground(new java.awt.Color(0, 0, 255));
+        jSeparator44.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel9.add(jSeparator44);
+        jSeparator44.setBounds(132, 210, 10, 40);
+
+        jSeparator47.setBackground(new java.awt.Color(0, 0, 255));
+        jSeparator47.setForeground(new java.awt.Color(0, 0, 255));
+        jSeparator47.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel9.add(jSeparator47);
+        jSeparator47.setBounds(220, 210, 20, 40);
 
         jTabbedPane2.addTab("Student", jPanel9);
 
@@ -329,7 +359,7 @@ public class Admission extends javax.swing.JFrame {
 
         errs1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         errs1.setForeground(new java.awt.Color(51, 51, 255));
-        jPanel11.add(errs1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 210, 160, 30));
+        jPanel11.add(errs1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 180, 160, 30));
 
         fselect1.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
         fselect1.setForeground(new java.awt.Color(0, 0, 255));
@@ -359,7 +389,12 @@ public class Admission extends javax.swing.JFrame {
 
         jSeparator43.setBackground(new java.awt.Color(0, 0, 255));
         jSeparator43.setForeground(new java.awt.Color(0, 0, 255));
-        jPanel11.add(jSeparator43, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, 120, 10));
+        jPanel11.add(jSeparator43, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 210, 110, 10));
+
+        jSeparator42.setBackground(new java.awt.Color(0, 0, 255));
+        jSeparator42.setForeground(new java.awt.Color(0, 0, 255));
+        jSeparator42.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel11.add(jSeparator42, new org.netbeans.lib.awtextra.AbsoluteConstraints(128, 210, 10, 40));
 
         subtea.setBackground(new java.awt.Color(255, 255, 255));
         subtea.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -370,12 +405,7 @@ public class Admission extends javax.swing.JFrame {
                 subteaActionPerformed(evt);
             }
         });
-        jPanel11.add(subtea, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, 80, 30));
-
-        jSeparator42.setBackground(new java.awt.Color(0, 0, 255));
-        jSeparator42.setForeground(new java.awt.Color(0, 0, 255));
-        jSeparator42.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jPanel11.add(jSeparator42, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 210, 10, 40));
+        jPanel11.add(subtea, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 90, 40));
 
         jSeparator57.setBackground(new java.awt.Color(0, 0, 255));
         jSeparator57.setForeground(new java.awt.Color(0, 0, 255));
@@ -674,6 +704,10 @@ public class Admission extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator41;
     private javax.swing.JSeparator jSeparator42;
     private javax.swing.JSeparator jSeparator43;
+    private javax.swing.JSeparator jSeparator44;
+    private javax.swing.JSeparator jSeparator45;
+    private javax.swing.JSeparator jSeparator46;
+    private javax.swing.JSeparator jSeparator47;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator50;
     private javax.swing.JSeparator jSeparator51;
