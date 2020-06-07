@@ -6,6 +6,8 @@
 package com.mycompany.admissionforpatan;
 
 import java.util.Timer;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -15,18 +17,16 @@ public class Splash extends javax.swing.JFrame {
 
     /**
      * Creates new form Splash
+     * @throws java.lang.InterruptedException
      */
-    public Splash() throws InterruptedException {
+    public Splash(){
         initComponents();
         sp1.setVisible(false);
         sp2.setVisible(false);
         sp3.setVisible(false);
         sp4.setVisible(false);
         logo.setVisible(false);
-        Timer tm=new Timer();
-        synchronized(tm){
-        tm.wait(2000);
-        }
+        
         
     }
 
@@ -61,6 +61,11 @@ public class Splash extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.addContainerListener(new java.awt.event.ContainerAdapter() {
+            public void componentAdded(java.awt.event.ContainerEvent evt) {
+                jPanel1ComponentAdded(evt);
+            }
+        });
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         sp4.setBackground(new java.awt.Color(0, 0, 255));
@@ -102,6 +107,19 @@ public class Splash extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jPanel1ComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_jPanel1ComponentAdded
+        // TODO add your handling code here:
+        Timer tm=new Timer();
+        synchronized(tm){
+            try {
+                tm.wait(2000);
+                new animator(a);a++;
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Splash.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }//GEN-LAST:event_jPanel1ComponentAdded
+int a=1;
     /**
      * @param args the command line arguments
      */
@@ -131,6 +149,7 @@ public class Splash extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new Splash().setVisible(true);
             }
@@ -146,4 +165,27 @@ public class Splash extends javax.swing.JFrame {
     private javax.swing.JSeparator sp3;
     private javax.swing.JSeparator sp4;
     // End of variables declaration//GEN-END:variables
+class animator{
+    public animator(int ds){
+        switch(ds){
+            case 1:
+                sp1.setVisible(true);
+                break;
+            case 2:
+                sp2.setVisible(true);
+                break;
+            case 3:
+                sp3.setVisible(true);
+                break;
+            case 4:
+                sp4.setVisible(true);
+                break;
+            case 5:
+                logo.setVisible(true);
+                break;
+            default:
+                break;
+        }
+    }
+}
 }
