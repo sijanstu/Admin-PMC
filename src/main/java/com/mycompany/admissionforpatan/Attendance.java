@@ -28,7 +28,7 @@ public class Attendance extends javax.swing.JFrame {
      */
     public Attendance() {
         initComponents();
-        ImageIcon img=new ImageIcon("src\\main\\icons\\file.png");
+        ImageIcon img=new ImageIcon("src\\main\\icons\\attendance.png");
         setIconImage(img.getImage());
     }
 
