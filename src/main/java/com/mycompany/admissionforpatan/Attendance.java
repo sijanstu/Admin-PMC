@@ -46,14 +46,24 @@ public class Attendance extends javax.swing.JFrame {
         jTabbedPane3 = new javax.swing.JTabbedPane();
         jPanel13 = new javax.swing.JPanel();
         jSeparator24 = new javax.swing.JSeparator();
+        jSeparator45 = new javax.swing.JSeparator();
+        jSeparator44 = new javax.swing.JSeparator();
+        jSeparator46 = new javax.swing.JSeparator();
         jSeparator26 = new javax.swing.JSeparator();
         jSeparator25 = new javax.swing.JSeparator();
         jLabel42 = new javax.swing.JLabel();
         jLabel48 = new javax.swing.JLabel();
         jLabel49 = new javax.swing.JLabel();
         jLabel50 = new javax.swing.JLabel();
+        jSeparator33 = new javax.swing.JSeparator();
+        jSeparator34 = new javax.swing.JSeparator();
+        jSeparator36 = new javax.swing.JSeparator();
+        jSeparator49 = new javax.swing.JSeparator();
         jPanel12 = new javax.swing.JPanel();
         jSeparator19 = new javax.swing.JSeparator();
+        jSeparator41 = new javax.swing.JSeparator();
+        jSeparator43 = new javax.swing.JSeparator();
+        jSeparator42 = new javax.swing.JSeparator();
         jSeparator17 = new javax.swing.JSeparator();
         jSeparator18 = new javax.swing.JSeparator();
         jLabel25 = new javax.swing.JLabel();
@@ -66,16 +76,26 @@ public class Attendance extends javax.swing.JFrame {
         prevall = new javax.swing.JTextField();
         jLabel43 = new javax.swing.JLabel();
         faculty = new javax.swing.JTextField();
+        jSeparator37 = new javax.swing.JSeparator();
+        jSeparator38 = new javax.swing.JSeparator();
+        jSeparator39 = new javax.swing.JSeparator();
+        jSeparator40 = new javax.swing.JSeparator();
+        jSeparator47 = new javax.swing.JSeparator();
+        jSeparator48 = new javax.swing.JSeparator();
+        jSeparator35 = new javax.swing.JSeparator();
+        jSeparator50 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBounds(new java.awt.Rectangle(300, 300, 300, 300));
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel37.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel37.setForeground(new java.awt.Color(0, 0, 255));
         jLabel37.setText("Attandance Section");
+        jPanel1.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 11, 159, -1));
 
         jTabbedPane3.setBackground(new java.awt.Color(255, 255, 255));
         jTabbedPane3.setForeground(new java.awt.Color(0, 0, 255));
@@ -87,6 +107,20 @@ public class Attendance extends javax.swing.JFrame {
 
         jSeparator24.setForeground(new java.awt.Color(0, 0, 255));
         jPanel13.add(jSeparator24, new org.netbeans.lib.awtextra.AbsoluteConstraints(76, 139, 150, 10));
+
+        jSeparator45.setBackground(new java.awt.Color(0, 0, 255));
+        jSeparator45.setForeground(new java.awt.Color(0, 0, 255));
+        jSeparator45.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel13.add(jSeparator45, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 160, 10, 30));
+
+        jSeparator44.setBackground(new java.awt.Color(0, 0, 255));
+        jSeparator44.setForeground(new java.awt.Color(0, 0, 255));
+        jSeparator44.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel13.add(jSeparator44, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 10, 30));
+
+        jSeparator46.setBackground(new java.awt.Color(0, 0, 255));
+        jSeparator46.setForeground(new java.awt.Color(0, 0, 255));
+        jPanel13.add(jSeparator46, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 160, 80, 10));
 
         jSeparator26.setForeground(new java.awt.Color(0, 0, 255));
         jPanel13.add(jSeparator26, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 79, 140, 10));
@@ -113,25 +147,54 @@ public class Attendance extends javax.swing.JFrame {
         jLabel50.setForeground(new java.awt.Color(0, 51, 255));
         jLabel50.setText("Submit");
         jLabel50.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        jPanel13.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 159, 70, -1));
+        jPanel13.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 162, 70, 30));
+
+        jSeparator33.setBackground(new java.awt.Color(0, 0, 255));
+        jSeparator33.setForeground(new java.awt.Color(0, 0, 255));
+        jSeparator33.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel13.add(jSeparator33, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, -10, 10, 200));
+
+        jSeparator34.setBackground(new java.awt.Color(0, 0, 255));
+        jSeparator34.setForeground(new java.awt.Color(0, 0, 255));
+        jSeparator34.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel13.add(jSeparator34, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 10, 200));
+
+        jSeparator36.setBackground(new java.awt.Color(0, 0, 255));
+        jSeparator36.setForeground(new java.awt.Color(0, 0, 255));
+        jPanel13.add(jSeparator36, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 300, 10));
+
+        jSeparator49.setBackground(new java.awt.Color(0, 0, 255));
+        jSeparator49.setForeground(new java.awt.Color(0, 0, 255));
+        jPanel13.add(jSeparator49, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 10));
 
         jTabbedPane3.addTab("Teacher", jPanel13);
 
         jPanel12.setBackground(new java.awt.Color(255, 255, 255));
         jPanel12.setForeground(new java.awt.Color(0, 0, 255));
-        jPanel12.setLayout(null);
+        jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jSeparator19.setForeground(new java.awt.Color(0, 0, 255));
-        jPanel12.add(jSeparator19);
-        jSeparator19.setBounds(90, 80, 110, 10);
+        jPanel12.add(jSeparator19, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, 110, 10));
+
+        jSeparator41.setBackground(new java.awt.Color(0, 0, 255));
+        jSeparator41.setForeground(new java.awt.Color(0, 0, 255));
+        jSeparator41.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel12.add(jSeparator41, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 160, 10, 30));
+
+        jSeparator43.setBackground(new java.awt.Color(0, 0, 255));
+        jSeparator43.setForeground(new java.awt.Color(0, 0, 255));
+        jPanel12.add(jSeparator43, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 160, 80, 10));
+
+        jSeparator42.setBackground(new java.awt.Color(0, 0, 255));
+        jSeparator42.setForeground(new java.awt.Color(0, 0, 255));
+        jSeparator42.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel12.add(jSeparator42, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 10, 30));
 
         jSeparator17.setForeground(new java.awt.Color(0, 0, 255));
-        jPanel12.add(jSeparator17);
-        jSeparator17.setBounds(90, 50, 110, 10);
+        jPanel12.add(jSeparator17, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, 110, 10));
 
         jSeparator18.setForeground(new java.awt.Color(0, 0, 255));
-        jPanel12.add(jSeparator18);
-        jSeparator18.setBounds(90, 110, 110, 10);
+        jPanel12.add(jSeparator18, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, 110, 10));
 
         jLabel25.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel25.setForeground(new java.awt.Color(0, 0, 255));
@@ -142,26 +205,22 @@ public class Attendance extends javax.swing.JFrame {
                 jLabel25MouseClicked(evt);
             }
         });
-        jPanel12.add(jLabel25);
-        jLabel25.setBounds(130, 150, 100, 22);
+        jPanel12.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 60, 30));
 
         jLabel39.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel39.setForeground(new java.awt.Color(0, 0, 255));
         jLabel39.setText("Faculty");
-        jPanel12.add(jLabel39);
-        jLabel39.setBounds(20, 30, 70, 22);
+        jPanel12.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 70, -1));
 
         jLabel40.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel40.setForeground(new java.awt.Color(0, 0, 255));
         jLabel40.setText("Present:");
-        jPanel12.add(jLabel40);
-        jLabel40.setBounds(20, 120, 70, 22);
+        jPanel12.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 70, -1));
 
         jLabel41.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel41.setForeground(new java.awt.Color(0, 0, 255));
         jLabel41.setText("Section: ");
-        jPanel12.add(jLabel41);
-        jLabel41.setBounds(20, 90, 70, 22);
+        jPanel12.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 70, -1));
 
         slid.setBackground(new java.awt.Color(255, 255, 255));
         slid.setForeground(new java.awt.Color(0, 0, 255));
@@ -176,8 +235,7 @@ public class Attendance extends javax.swing.JFrame {
                 slidStateChanged(evt);
             }
         });
-        jPanel12.add(slid);
-        slid.setBounds(90, 120, 180, 31);
+        jPanel12.add(slid, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, 180, -1));
 
         batch.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         batch.setForeground(new java.awt.Color(0, 0, 255));
@@ -187,71 +245,82 @@ public class Attendance extends javax.swing.JFrame {
                 batchActionPerformed(evt);
             }
         });
-        jPanel12.add(batch);
-        batch.setBounds(90, 50, 110, 30);
+        jPanel12.add(batch, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, 110, 30));
 
         section.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         section.setForeground(new java.awt.Color(0, 0, 255));
         section.setBorder(null);
-        jPanel12.add(section);
-        section.setBounds(90, 80, 110, 30);
+        jPanel12.add(section, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, 110, 30));
 
         prevall.setEditable(false);
         prevall.setBackground(new java.awt.Color(255, 255, 255));
         prevall.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         prevall.setForeground(new java.awt.Color(0, 0, 255));
         prevall.setText("0");
+        prevall.setBorder(null);
         prevall.setFocusable(false);
         prevall.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 prevallActionPerformed(evt);
             }
         });
-        jPanel12.add(prevall);
-        prevall.setBounds(270, 120, 30, 28);
+        jPanel12.add(prevall, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 108, 30, 40));
 
         jLabel43.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel43.setForeground(new java.awt.Color(0, 0, 255));
         jLabel43.setText("Batch: ");
-        jPanel12.add(jLabel43);
-        jLabel43.setBounds(20, 60, 70, 22);
+        jPanel12.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 70, -1));
 
         faculty.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         faculty.setForeground(new java.awt.Color(0, 0, 255));
         faculty.setBorder(null);
-        jPanel12.add(faculty);
-        faculty.setBounds(90, 20, 110, 30);
+        jPanel12.add(faculty, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, 110, 30));
+
+        jSeparator37.setBackground(new java.awt.Color(0, 0, 255));
+        jSeparator37.setForeground(new java.awt.Color(0, 0, 255));
+        jPanel12.add(jSeparator37, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 10));
+
+        jSeparator38.setBackground(new java.awt.Color(0, 0, 255));
+        jSeparator38.setForeground(new java.awt.Color(0, 0, 255));
+        jSeparator38.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel12.add(jSeparator38, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, 10, 190));
+
+        jSeparator39.setBackground(new java.awt.Color(0, 0, 255));
+        jSeparator39.setForeground(new java.awt.Color(0, 0, 255));
+        jPanel12.add(jSeparator39, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 300, 10));
+
+        jSeparator40.setBackground(new java.awt.Color(0, 0, 255));
+        jSeparator40.setForeground(new java.awt.Color(0, 0, 255));
+        jSeparator40.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel12.add(jSeparator40, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 10, 200));
 
         jTabbedPane3.addTab("Student", jPanel12);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jTabbedPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(71, 71, 71))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel37)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTabbedPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        jPanel1.add(jTabbedPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 44, 310, 225));
+
+        jSeparator47.setBackground(new java.awt.Color(0, 0, 255));
+        jSeparator47.setForeground(new java.awt.Color(0, 0, 255));
+        jSeparator47.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel1.add(jSeparator47, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 10, 200));
+
+        jSeparator48.setBackground(new java.awt.Color(0, 0, 255));
+        jSeparator48.setForeground(new java.awt.Color(0, 0, 255));
+        jSeparator48.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel1.add(jSeparator48, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, -10, 10, 70));
+
+        jSeparator35.setBackground(new java.awt.Color(0, 0, 255));
+        jSeparator35.setForeground(new java.awt.Color(0, 0, 255));
+        jPanel1.add(jSeparator35, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 58, 300, -1));
+
+        jSeparator50.setBackground(new java.awt.Color(0, 0, 255));
+        jSeparator50.setForeground(new java.awt.Color(0, 0, 255));
+        jPanel1.add(jSeparator50, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 10));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -397,6 +466,24 @@ int c;
     private javax.swing.JSeparator jSeparator24;
     private javax.swing.JSeparator jSeparator25;
     private javax.swing.JSeparator jSeparator26;
+    private javax.swing.JSeparator jSeparator33;
+    private javax.swing.JSeparator jSeparator34;
+    private javax.swing.JSeparator jSeparator35;
+    private javax.swing.JSeparator jSeparator36;
+    private javax.swing.JSeparator jSeparator37;
+    private javax.swing.JSeparator jSeparator38;
+    private javax.swing.JSeparator jSeparator39;
+    private javax.swing.JSeparator jSeparator40;
+    private javax.swing.JSeparator jSeparator41;
+    private javax.swing.JSeparator jSeparator42;
+    private javax.swing.JSeparator jSeparator43;
+    private javax.swing.JSeparator jSeparator44;
+    private javax.swing.JSeparator jSeparator45;
+    private javax.swing.JSeparator jSeparator46;
+    private javax.swing.JSeparator jSeparator47;
+    private javax.swing.JSeparator jSeparator48;
+    private javax.swing.JSeparator jSeparator49;
+    private javax.swing.JSeparator jSeparator50;
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTextField prevall;
     private javax.swing.JTextField section;
