@@ -170,6 +170,8 @@ public class Login extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        logo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Programming-learning\\Documents\\NetBeansProjects\\AdmissionforPatan\\src\\main\\icons\\download.png")); // NOI18N
         jPanel1.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, 240, 280));
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 204));

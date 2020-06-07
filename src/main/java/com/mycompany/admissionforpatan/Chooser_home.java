@@ -155,7 +155,7 @@ public class Chooser_home extends javax.swing.JFrame {
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("Sylfaen", 0, 24)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel6.setForeground(new java.awt.Color(0, 204, 204));
         jLabel6.setText("Status");
         jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -183,7 +183,7 @@ public class Chooser_home extends javax.swing.JFrame {
         });
         p1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 140, 120));
 
-        jPanel1.add(p1, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 49, 213, 120));
+        jPanel1.add(p1, new org.netbeans.lib.awtextra.AbsoluteConstraints(4, 49, 220, 120));
 
         p2.setBackground(new java.awt.Color(255, 255, 255));
         p2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -204,7 +204,7 @@ public class Chooser_home extends javax.swing.JFrame {
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setFont(new java.awt.Font("Sylfaen", 0, 24)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel5.setForeground(new java.awt.Color(0, 204, 204));
         jLabel5.setText("Admission");
         jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -253,7 +253,7 @@ public class Chooser_home extends javax.swing.JFrame {
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Sylfaen", 0, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel2.setForeground(new java.awt.Color(0, 204, 204));
         jLabel2.setText("Search");
         p4.add(jLabel2);
         jLabel2.setBounds(0, 0, 67, 33);
@@ -275,12 +275,12 @@ public class Chooser_home extends javax.swing.JFrame {
 
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
         jLabel7.setFont(new java.awt.Font("Sylfaen", 0, 24)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel7.setForeground(new java.awt.Color(0, 204, 204));
         jLabel7.setText("Notices");
         p6.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
         p6.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 170, 120));
 
-        jPanel1.add(p6, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 176, 213, 150));
+        jPanel1.add(p6, new org.netbeans.lib.awtextra.AbsoluteConstraints(4, 176, 220, 160));
 
         p7.setBackground(new java.awt.Color(255, 255, 255));
         p7.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -298,7 +298,7 @@ public class Chooser_home extends javax.swing.JFrame {
 
         jLabel8.setBackground(new java.awt.Color(255, 255, 255));
         jLabel8.setFont(new java.awt.Font("Sylfaen", 0, 24)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel8.setForeground(new java.awt.Color(0, 204, 204));
         jLabel8.setText("Attendance");
         jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -326,7 +326,7 @@ public class Chooser_home extends javax.swing.JFrame {
         });
         p7.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, 140, 130));
 
-        jPanel1.add(p7, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 176, 220, 150));
+        jPanel1.add(p7, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 176, 220, 160));
 
         p5.setBackground(new java.awt.Color(255, 255, 255));
         p5.setForeground(new java.awt.Color(0, 0, 204));
@@ -346,7 +346,7 @@ public class Chooser_home extends javax.swing.JFrame {
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Sylfaen", 0, 24)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel4.setForeground(new java.awt.Color(0, 204, 204));
         jLabel4.setText("Profile");
         jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -374,11 +374,11 @@ public class Chooser_home extends javax.swing.JFrame {
         });
         p5.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 150, 120));
 
-        jPanel1.add(p5, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 180, 180, 150));
+        jPanel1.add(p5, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 180, -1, 150));
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 255));
         jLabel1.setFont(new java.awt.Font("Tempus Sans ITC", 0, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel1.setForeground(new java.awt.Color(51, 51, 255));
         jLabel1.setText("Welcome To Patan Multiple Campus App");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 434, 30));
 

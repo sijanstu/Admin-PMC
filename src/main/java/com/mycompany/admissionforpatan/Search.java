@@ -74,7 +74,6 @@ public class Search extends javax.swing.JFrame {
         p = new javax.swing.JLabel();
         jSeparator15 = new javax.swing.JSeparator();
         jSeparator16 = new javax.swing.JSeparator();
-        jSeparator17 = new javax.swing.JSeparator();
         next = new javax.swing.JButton();
         jSeparator19 = new javax.swing.JSeparator();
         jSeparator20 = new javax.swing.JSeparator();
@@ -85,6 +84,7 @@ public class Search extends javax.swing.JFrame {
         jSeparator26 = new javax.swing.JSeparator();
         jSeparator30 = new javax.swing.JSeparator();
         jSeparator32 = new javax.swing.JSeparator();
+        jSeparator33 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -298,11 +298,6 @@ public class Search extends javax.swing.JFrame {
         jSeparator16.setForeground(new java.awt.Color(0, 0, 255));
         jPanel1.add(jSeparator16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 530, 10));
 
-        jSeparator17.setBackground(new java.awt.Color(0, 0, 255));
-        jSeparator17.setForeground(new java.awt.Color(0, 0, 255));
-        jSeparator17.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jPanel1.add(jSeparator17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 10, 310));
-
         next.setBackground(new java.awt.Color(0, 0, 255));
         next.setForeground(new java.awt.Color(0, 0, 204));
         next.setText("Next page");
@@ -356,6 +351,11 @@ public class Search extends javax.swing.JFrame {
         jSeparator32.setBackground(new java.awt.Color(0, 0, 255));
         jSeparator32.setForeground(new java.awt.Color(0, 0, 255));
         jPanel1.add(jSeparator32, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 288, 100, -1));
+
+        jSeparator33.setBackground(new java.awt.Color(0, 0, 255));
+        jSeparator33.setForeground(new java.awt.Color(0, 0, 255));
+        jSeparator33.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel1.add(jSeparator33, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 10, 310));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -545,7 +545,6 @@ String up;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator15;
     private javax.swing.JSeparator jSeparator16;
-    private javax.swing.JSeparator jSeparator17;
     private javax.swing.JSeparator jSeparator18;
     private javax.swing.JSeparator jSeparator19;
     private javax.swing.JSeparator jSeparator20;
@@ -561,6 +560,7 @@ String up;
     private javax.swing.JSeparator jSeparator30;
     private javax.swing.JSeparator jSeparator31;
     private javax.swing.JSeparator jSeparator32;
+    private javax.swing.JSeparator jSeparator33;
     private javax.swing.JButton next;
     private javax.swing.JLabel p;
     private javax.swing.JButton pre;
