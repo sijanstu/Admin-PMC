@@ -124,6 +124,9 @@ public class Login extends javax.swing.JFrame {
         pob1.setVisible(false);
     }
 
+    /**
+     *
+     */
     public void main() {
         setVisible(true);
     }
@@ -167,7 +170,6 @@ public class Login extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBounds(new java.awt.Rectangle(300, 250, 250, 250));
         setUndecorated(true);
-        setType(java.awt.Window.Type.UTILITY);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -199,6 +201,11 @@ public class Login extends javax.swing.JFrame {
         name.setForeground(new java.awt.Color(255, 255, 255));
         name.setBorder(null);
         name.setCaretColor(new java.awt.Color(255, 255, 255));
+        name.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nameActionPerformed(evt);
+            }
+        });
         jPanel2.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 160, 30));
 
         signupb.setBackground(new java.awt.Color(255, 255, 255));
@@ -492,14 +499,19 @@ public class Login extends javax.swing.JFrame {
         dispose();
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel1MouseClicked
+
+    private void nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_nameActionPerformed
     /**
-     * @param args the command line arguments
+    // * @param args the command line arguments
      */
     public void maincall()
     {
         main();
     }
-    public static void main(String args[]) {
+    public static void mainlogin() {
         /* Set the Nimbus look and feel */
 
 //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

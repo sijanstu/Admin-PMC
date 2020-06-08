@@ -22,10 +22,9 @@ public class Splash extends javax.swing.JFrame {
      */
     public Splash() {
         initComponents();
-        sp1.setVisible(false);
-        sp2.setVisible(false);
-        sp3.setVisible(false);
-        sp4.setVisible(false);
+        load.setVisible(false);
+            cont.setVisible(false);
+       
         logo.setVisible(false);
     }
 
@@ -40,17 +39,10 @@ public class Splash extends javax.swing.JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
-        sp4 = new javax.swing.JSeparator();
-        sp2 = new javax.swing.JSeparator();
-        sp3 = new javax.swing.JSeparator();
-        sp1 = new javax.swing.JSeparator();
+        cont = new javax.swing.JButton();
         logo = new javax.swing.JLabel();
+        load = new javax.swing.JLabel();
         click = new javax.swing.JButton();
-        v1 = new javax.swing.JLabel();
-        v2 = new javax.swing.JLabel();
-        v3 = new javax.swing.JLabel();
-        v4 = new javax.swing.JLabel();
-        v5 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -64,9 +56,11 @@ public class Splash extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBounds(new java.awt.Rectangle(400, 400, 400, 400));
+        setBounds(new java.awt.Rectangle(450, 200, 255, 255));
+        setEnabled(false);
         setUndecorated(true);
         setResizable(false);
+        setType(java.awt.Window.Type.UTILITY);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.addContainerListener(new java.awt.event.ContainerAdapter() {
@@ -81,29 +75,30 @@ public class Splash extends javax.swing.JFrame {
         });
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        sp4.setBackground(new java.awt.Color(0, 0, 255));
-        sp4.setForeground(new java.awt.Color(0, 0, 255));
-        sp4.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jPanel1.add(sp4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 12, 270));
-
-        sp2.setBackground(new java.awt.Color(0, 0, 255));
-        sp2.setForeground(new java.awt.Color(0, 0, 255));
-        sp2.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jPanel1.add(sp2, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 17, 10, 270));
-
-        sp3.setBackground(new java.awt.Color(0, 0, 255));
-        sp3.setForeground(new java.awt.Color(0, 0, 255));
-        jPanel1.add(sp3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 271, 250, 10));
-
-        sp1.setBackground(new java.awt.Color(0, 0, 255));
-        sp1.setForeground(new java.awt.Color(0, 0, 255));
-        jPanel1.add(sp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 250, 10));
+        cont.setBackground(new java.awt.Color(255, 255, 255));
+        cont.setForeground(new java.awt.Color(0, 0, 255));
+        cont.setText("Next");
+        cont.setFocusable(false);
+        cont.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                contActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cont, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 273, -1, 30));
 
         logo.setBackground(new java.awt.Color(255, 255, 255));
         logo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Programming-learning\\Documents\\NetBeansProjects\\AdmissionforPatan\\src\\main\\icons\\download.png")); // NOI18N
         logo.setOpaque(true);
-        jPanel1.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 220, 240));
+        jPanel1.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 220, 240));
 
+        load.setBackground(new java.awt.Color(0, 0, 255));
+        load.setFont(new java.awt.Font("Tempus Sans ITC", 0, 24)); // NOI18N
+        load.setForeground(new java.awt.Color(51, 51, 255));
+        load.setText("Loading........");
+        jPanel1.add(load, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 160, 40));
+
+        click.setBackground(new java.awt.Color(255, 255, 255));
+        click.setForeground(new java.awt.Color(0, 0, 255));
         click.setText("Click To Agree Terms and Conditions");
         click.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,21 +106,6 @@ public class Splash extends javax.swing.JFrame {
             }
         });
         jPanel1.add(click, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 290, -1));
-
-        v1.setText(".");
-        jPanel1.add(v1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
-
-        v2.setText(".");
-        jPanel1.add(v2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 10, -1));
-
-        v3.setText(".");
-        jPanel1.add(v3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 10, -1));
-
-        v4.setText(".");
-        jPanel1.add(v4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 10, -1));
-
-        v5.setText(".");
-        jPanel1.add(v5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, 10, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -135,7 +115,7 @@ public class Splash extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -149,79 +129,22 @@ public class Splash extends javax.swing.JFrame {
     private void jPanel1ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jPanel1ComponentShown
 
     }//GEN-LAST:event_jPanel1ComponentShown
-//        ActionListener taskPerformer = new ActionListener() {
-//        @Override
-//        public void actionPerformed(ActionEvent evt1) {
-//            switch(a)
-//            {
-//                case 1:
-//                    sp1.setVisible(true);
-//                    break;
-//                case 2:
-//                    sp2.setVisible(true);
-//                    break;
-//                case 3:
-//                    sp3.setVisible(true);
-//                    break;
-//                case 4:
-//                    sp4.setVisible(true);
-//                    break;
-//                case 5:
-//                    logo.setVisible(true);
-//                    break;
-//                default:
-//                    break;
-//                    
-//            }
-//           
-//        }
-//    };
+
     private void clickActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clickActionPerformed
-//            
-//ActionListener taskPerformer = (ActionEvent evt1) -> {
-//                // Place here code to execute when the time runs out.
-//                switch(a)
-//            {
-//                case 1:
-//                    sp1.setVisible(true);
-//                    break;
-//                case 2:
-//                    sp2.setVisible(true);
-//                    break;
-//                case 3:
-//                    sp3.setVisible(true);
-//                    break;
-//                case 4:
-//                    sp4.setVisible(true);
-//                    break;
-//                case 5:
-//                    logo.setVisible(true);
-//                    break;
-//                default:
-//                    break;
-//                    
-//            }
-//            };
-//            // TODO add your handling code here:
-//            click.setVisible(false);
-//            int delay1 = 700; a++;
-//            new Timer(delay1, taskPerformer).start();
-//            v1.setVisible(false);
-//            int delay2 = 700; a++;
-//            new Timer(delay2, taskPerformer).start();
-//            v2.setVisible(false);
-//            int delay3 = 700; a++;
-//            new Timer(delay3, taskPerformer).start();
-//            v3.setVisible(false);
-//            int delay4 = 700; a++;
-//            new Timer(delay4, taskPerformer).start();
-//            v4.setVisible(false);
-//            int delay5 = 700; a++;
-//            new Timer(delay5, taskPerformer).start();
-//            v5.setVisible(false);
-//            
-//            
+           // setBounds(new java.awt.Rectangle(300, 255, 255, 255));
+            click.setVisible(false); logo.setVisible(true);  
+            load.setVisible(true);
+            cont.setVisible(true);
+            
+            
+            
     }//GEN-LAST:event_clickActionPerformed
+
+    private void contActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contActionPerformed
+            Login.mainlogin();
+            dispose();
+
+    }//GEN-LAST:event_contActionPerformed
     int a = 1;
     public static void main(String[] args) {
         
@@ -247,17 +170,10 @@ public class Splash extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton click;
+    private javax.swing.JButton cont;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel load;
     private javax.swing.JLabel logo;
-    private javax.swing.JSeparator sp1;
-    private javax.swing.JSeparator sp2;
-    private javax.swing.JSeparator sp3;
-    private javax.swing.JSeparator sp4;
-    private javax.swing.JLabel v1;
-    private javax.swing.JLabel v2;
-    private javax.swing.JLabel v3;
-    private javax.swing.JLabel v4;
-    private javax.swing.JLabel v5;
     // End of variables declaration//GEN-END:variables
 }
