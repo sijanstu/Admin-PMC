@@ -393,17 +393,23 @@ public class Login extends javax.swing.JFrame {
 
     private void SplashActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SplashActionPerformed
         // TODO add your handling code here:
+<<<<<<< Updated upstream
 //<<<<<<< Updated upstream
         splashform sp=new splashform();
         dispose();
         splashform.mainsp();
         
 //=======
+=======
+>>>>>>> Stashed changes
         dispose();
         String[] args = null;
         splashv2.main(args);
        
+<<<<<<< Updated upstream
 //>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
     }//GEN-LAST:event_SplashActionPerformed
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
