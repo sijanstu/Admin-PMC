@@ -24,19 +24,25 @@ public class NewUser {
         if ("".equals(u) || "".equals(p) || "".equals(Name) || "".equals(Position)) {
             check = true;
         } else {
-            File f1 = new File("D:\\Patan_APP/Admin-control-settings/");
+            File f1 = new File("D:\\Patan_APP/Admin-control-settings");
             File f2 = new File("D:\\Patan_APP/Admin-control-setting/Attendance.pmc");
             File f3 = new File("D:\\Patan_APP/Admin-control-settings/Admission.pmc");
             File f4 = new File("D:\\Patan_APP/Admin-control-settings/Status.pmc");
             File f5 = new File("D:\\Patan_APP/Admin-control-settings/Notice.pmc");
             File f6 = new File("D:\\Patan_APP/Admin-control-settings/User.pmc");
-            File f7 = new File("D:\\Patan_APP/Admin-control-settings/profle.pmc");
+            File f7 = new File("D:\\Patan_APP/Admin-control-settings/Profle.pmc");
             f1.mkdirs();
+            if(!f2.exists())
             f2.createNewFile();
+            if(!f3.exists())
             f3.createNewFile();
+            if(!f4.exists())
             f4.createNewFile();
+            if(!f5.exists())
             f5.createNewFile();
+            if(!f6.exists())
             f6.createNewFile();
+            if(!f7.exists())
             f7.createNewFile();
             try (PrintWriter pw = new PrintWriter(f7)) {
                 pw.write(Name + "\n" + Position);
@@ -66,7 +72,7 @@ class LoginChecker {
 
     LoginChecker(String u, String p) throws FileNotFoundException, IOException {
         File passch = new File("D:\\Patan_APP/Admin-control-settings/User.pmc");
-        String ch = u + p;
+        String ch = u + "_"+p;
         if (!passch.exists()) {
             check = true;
         } else {

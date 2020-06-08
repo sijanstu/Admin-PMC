@@ -306,13 +306,13 @@ public class Login extends javax.swing.JFrame {
                         Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
                     }
                 } else {
-                   if("".equals(position.getText())||"".equals(usename.getText()))
+                   if("".equals(name.getText())||"".equals(usename.getText()))
                    {
                        errs.setText("enter all details");
                    }
                    else
                     try {
-                        NewUser nu=new NewUser(name.getText(), pass.getText(),name.getText(),position.getText());
+                        NewUser nu=new NewUser(name.getText(), pass.getText(),usename.getText(),position.getText());
                         errs.setText(nu.error());
                     } catch (IOException ex) {
                         Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
@@ -393,7 +393,7 @@ public class Login extends javax.swing.JFrame {
     private void SplashActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SplashActionPerformed
         // TODO add your handling code here:
         dispose();
-        splashform.mainsp();    
+        //splashform.mainsp();    
         String[] args = null;
         splashv2.main(args);     
 
