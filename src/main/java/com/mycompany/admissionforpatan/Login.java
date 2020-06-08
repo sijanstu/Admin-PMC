@@ -11,106 +11,6 @@ import javax.swing.ImageIcon;
 
 //@author Sijan Bhandari
 public class Login extends javax.swing.JFrame {
-
-    class newUser {
-
-        newUser(String p, String u) throws FileNotFoundException, IOException {
-            us = u;
-            ps = p;
-            File passch5 = new File("D:\\Patan_APP/Admin-control-settings/"
-                    + u
-                    + "_"
-                    + p
-                    + "/Attendance");
-            File passch6 = new File("D:\\Patan_APP/Admin-control-settings/"
-                    + u
-                    + "_"
-                    + p
-                    + "/Profile");
-            passch5.mkdirs();
-            passch6.mkdirs();
-            File passch1 = new File("D:\\Patan_APP/Admin-control-settings/"
-                    + u
-                    + "_"
-                    + p
-                    + "/Attendance/Student_count.txt");
-            passch1.createNewFile();
-            File passch = new File("D:\\Patan_APP/Admin-control-settings/"
-                    + u
-                    + "_"
-                    + p);
-            File passch3 = new File("D:\\Patan_APP/Admin-control-settings/"
-                    + u
-                    + "_"
-                    + p
-                    + "/Attendance/Teacher_count.txt");
-            passch3.createNewFile();
-            File passch2 = new File("D:\\Patan_APP/Admin-control-settings/"
-                    + u
-                    + "_"
-                    + p
-                    + "/Profile/Name.txt");
-            passch2.createNewFile();
-            File passch4 = new File("D:\\Patan_APP/Admin-control-settings/"
-                    + u
-                    + "_"
-                    + p
-                    + "/Profile/Position.txt");
-            passch4.createNewFile();
-            
-            passch.mkdir();
-            //userch.mkdir();
-            err.setText("");
-            errs.setText("");
-            errp.setText("ALL OK");
-            setVisible(false);
-            File cl;
-            cl = new File("D:\\Patan_APP/Admin-control-settings/current login.txt");
-            if (!cl.exists()) {
-                cl.createNewFile();
-            }
-            try (PrintWriter pw = new PrintWriter("D:\\Patan_APP/Admin-control-settings/current login.txt")) {
-                pw.write(u + "_" + p);
-                pw.close();
-            }
-            try (PrintWriter pw = new PrintWriter(passch2)) {
-                pw.write(usename.getText());
-                pw.close();
-            }
-            try (PrintWriter pw = new PrintWriter(passch4)) {
-                pw.write(position.getText());
-                pw.close();
-            }
-            Chooser_home homel = new Chooser_home(u, p);
-        }
-    }
-
-    class loginChecker {
-
-        loginChecker(String p, String u) throws FileNotFoundException {
-            us = u;
-            ps = p;
-            File passch = new File("D:\\Patan_APP/Admin-control-settings/"
-                    + u
-                    + "_"
-                    + p);
-            if (!passch.exists()) {
-                errs.setText("login error");
-            } else {
-                err.setText("");
-                errs.setText("");
-                errp.setText("ALL OK");
-                setVisible(false);
-                try (PrintWriter pw = new PrintWriter("D:\\Patan_APP/Admin-control-settings/current login.txt")) {
-                pw.write(u + "_" + p);
-                pw.close();
-            }
-                Chooser_home home1 = new Chooser_home(u, p);
-            }
-        }
-        
-        
-    }
     public Login() {
         initComponents();
         ImageIcon imgg = new ImageIcon("src\\main\\icons\\download.png");
@@ -254,7 +154,7 @@ public class Login extends javax.swing.JFrame {
         jPanel2.add(err, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 150, 160, 10));
 
         errs.setForeground(new java.awt.Color(255, 0, 0));
-        jPanel2.add(errs, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 230, 100, 20));
+        jPanel2.add(errs, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 220, 150, 30));
 
         errp.setForeground(new java.awt.Color(255, 0, 0));
         jPanel2.add(errp, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 160, 20));
@@ -399,8 +299,11 @@ public class Login extends javax.swing.JFrame {
                 errp.setText("");
                 if (signupv == 0) {
                     try {
-                        new loginChecker(pass.getText(), name.getText());
+                        LoginChecker lc=new LoginChecker(name.getText(), pass.getText());
+                        errs.setText(lc.error());
                     } catch (FileNotFoundException ex) {
+                        Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (IOException ex) {
                         Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
                     }
                 } else {
@@ -410,7 +313,8 @@ public class Login extends javax.swing.JFrame {
                    }
                    else
                     try {
-                        new newUser(pass.getText(), name.getText());
+                        NewUser nu=new NewUser(name.getText(), pass.getText(),name.getText(),position.getText());
+                        errs.setText(nu.error());
                     } catch (IOException ex) {
                         Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
                     }
@@ -489,10 +393,17 @@ public class Login extends javax.swing.JFrame {
 
     private void SplashActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SplashActionPerformed
         // TODO add your handling code here:
+//<<<<<<< Updated upstream
         splashform sp=new splashform();
         dispose();
         splashform.mainsp();
         
+//=======
+        dispose();
+        String[] args = null;
+        splashv2.main(args);
+       
+//>>>>>>> Stashed changes
     }//GEN-LAST:event_SplashActionPerformed
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked

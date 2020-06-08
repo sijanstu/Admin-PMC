@@ -56,7 +56,7 @@ public class Chooser_home extends javax.swing.JFrame {
 
     public Chooser_home(String us, String pas) {
         //initComponents();
-        mainchooser(us, pas);
+        mainchooser();
         //initComponents();
         //setVisible(true);
 
@@ -873,14 +873,12 @@ public class Chooser_home extends javax.swing.JFrame {
     /**
      * //@param args the command line arguments
      *
-     * @param u
-     * @param p
      */
-    public final void mainchooser(String u, String p) {
+    public final void mainchooser() {
 
         Voicespeaker voicespeaker = new Voicespeaker("welcome to Patan app", 1);
-        us = u;
-        ps = p;
+//        us = u;
+//        ps = p;
         /* Set the Nimbus look and feel */
         //jLabel13.setIcon(new javax.swing.ImageIcon("\\src\\main\\icons\\Login Manager.png"));
 //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
