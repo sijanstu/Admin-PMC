@@ -11,6 +11,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
@@ -293,27 +294,15 @@ int user=0;
     private void jPanel2ComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_jPanel2ComponentAdded
         // TODO add your handling code here:
 //recognize user
-        try {
-            File frchstu = new File("D:\\Patan_APP\\Admin-control-settings\\current login.txt");
-            try (BufferedReader fr = new BufferedReader(new FileReader(frchstu))) {
-                if (frchstu.exists()) {
-                    String strLine;
-                        up=fr.readLine();
-                }
-                fr.close();
-            }
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(Status.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(Status.class.getName()).log(Level.SEVERE, null, ex);
-        }    
+
 //read user's name
          try {
-            File frchstu = new File("D:\\Patan_APP\\Admin-control-settings\\"+up+"\\Profile\\Name.txt");
+            File frchstu = new File("D:\\Patan_APP\\Admin-control-settings\\Profile.txt");
             try (BufferedReader fr = new BufferedReader(new FileReader(frchstu))) {
                 if (frchstu.exists()) {
-                    String strLine;
                         name.setText("Name: "+fr.readLine());
+                        position.setText("Position:"+fr.readLine());
+                    
                 }
                 fr.close();
             }
@@ -322,21 +311,7 @@ int user=0;
         } catch (IOException ex) {
             Logger.getLogger(Status.class.getName()).log(Level.SEVERE, null, ex);
         }    
-//read user's profile
-try {
-            File frchstu = new File("D:\\Patan_APP\\Admin-control-settings\\"+up+"\\Profile\\Position.txt");
-            try (BufferedReader fr = new BufferedReader(new FileReader(frchstu))) {
-                if (frchstu.exists()) {
-                    String strLine;
-                        position.setText("Position: "+fr.readLine());
-                }
-                fr.close();
-            }
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(Status.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(Status.class.getName()).log(Level.SEVERE, null, ex);
-        }           
+//read user's profile        
     }//GEN-LAST:event_jPanel2ComponentAdded
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
@@ -404,23 +379,27 @@ public class passChanger {
 
         public passChanger() {
             try {
-                File passch = new File("D:\\Patan_APP/Admin-control-settings/" 
-                        + ous.getText() 
-                        + "_" 
-                        + oup.getText());
-                if (passch.exists()) {
-                    passch.delete();
-                    File passchn = new File("D:\\Patan_APP/Admin-control-settings/" 
-                            + ous.getText() 
-                            + "_" 
-                            + nup.getText());
-                    // passch.renameTo(passchn);
-                    passchn.mkdirs();
+                File passch = new File("D:\\Patan_APP/Admin-control-settings/user.txt");
+                try (BufferedReader br = new BufferedReader(new FileReader(passch))) {
+                    String brch;
+                    brch=br.readLine();
+                    br.close();
+                    String chec=ous.getText()+oup.getText();
+                
+                if (brch.equals(chec)) {
+                    
+                    try (PrintWriter pw = new PrintWriter(passch)) {
+                        pw.flush();
+                        pw.write(ous + "\n" + nup);
+                         pw.close();
+                    
+            }
                     errch.setForeground(Color.green);
-                    errch.setText("Username Changed");
+                    errch.setText("Password Changed");
                 } else {
                     errch.setForeground(Color.red);
                     errch.setText("wrong data");
+                }
                 }
             } catch (Exception e) {
                 errch.setForeground(Color.red);
@@ -432,20 +411,29 @@ public class passChanger {
     public class userChanger {
 
         public userChanger() {
-            try {
-                File passch = new File("D:\\Patan_APP/Admin-control-settings/" 
-                        + ous.getText() 
-                        + "_" 
-                        + oup.getText());
-                passch.delete();
-                File passchn = new File("D:\\Patan_APP/Admin-control-settings/" 
-                        + nup.getText() 
-                        + "_" 
-                        + oup.getText());
-                passch.renameTo(passchn);
-                passchn.mkdirs();
-                errch.setForeground(Color.green);
-                errch.setText("Username Changed");
+            try{
+                File passch = new File("D:\\Patan_APP/Admin-control-settings/user.txt");
+           try (BufferedReader br = new BufferedReader(new FileReader(passch))) {
+                    String brch;
+                    brch=br.readLine();
+                    br.close();
+                    String chec=ous.getText()+oup.getText();
+                
+                if (brch.equals(chec)) {
+                    
+                    try (PrintWriter pw = new PrintWriter(passch)) {
+                        pw.flush();
+                        pw.write(nup + "\n" + ous);
+                         pw.close();
+                    
+            }
+                    errch.setForeground(Color.green);
+                    errch.setText("Username Changed");
+                } else {
+                    errch.setForeground(Color.red);
+                    errch.setText("wrong data");
+                }
+                }
             } catch (Exception e) {
                 errch.setForeground(Color.red);
                 errch.setText("error");

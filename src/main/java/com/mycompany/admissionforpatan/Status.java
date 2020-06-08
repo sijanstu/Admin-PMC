@@ -294,22 +294,9 @@ public class Status extends javax.swing.JFrame {
 
     private void jPanel3ComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_jPanel3ComponentAdded
 p1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
-//to recognize user
-File currentuser = new File("D:\\Patan_APP\\Admin-control-settings\\current login.txt");
-try {
-            try (BufferedReader fr = new BufferedReader(new FileReader(currentuser))) {
-                if (currentuser.exists()) {
-                        up=fr.readLine();
-                }
-                fr.close();
-            }
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(Status.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(Status.class.getName()).log(Level.SEVERE, null, ex);
-        }           
+//to recognize user    
  //get data
- File f1=new File("D:\\Patan_APP\\Admin-control-settings\\"+up+"\\File\\Admission\\Students.txt");
+ File f1=new File("D:\\Patan_APP\\Admin-control-settings\\Status.txt");
         try {
             BufferedReader br=new BufferedReader(new FileReader(f1));
         } catch (FileNotFoundException ex) {

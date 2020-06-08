@@ -24,13 +24,13 @@ public class NewUser {
         if ("".equals(u) || "".equals(p) || "".equals(Name) || "".equals(Position)) {
             check = true;
         } else {
-            File f1 = new File("D:\\Patan_APP/Admin-control-settings");
-            File f2 = new File("D:\\Patan_APP/Admin-control-setting/Attendance.txt");
-            File f3 = new File("D:\\Patan_APP/Admin-control-settings/Admission.txt");
-            File f4 = new File("D:\\Patan_APP/Admin-control-settings/Status.txt");
-            File f5 = new File("D:\\Patan_APP/Admin-control-settings/Notice.txt");
-            File f6 = new File("D:\\Patan_APP/Admin-control-settings/User.txt");
-            File f7 = new File("D:\\Patan_APP/Admin-control-settings/Profle.txt");
+            File f1 = new File("D:\\Patan_APP\\Admin-control-settings");
+            File f2 = new File("D:\\Patan_APP\\Admin-control-settings\\Attendance.txt");
+            File f3 = new File("D:\\Patan_APP\\Admin-control-settings\\Admission.txt");
+            File f4 = new File("D:\\Patan_APP\\Admin-control-settings\\Status.txt");
+            File f5 = new File("D:\\Patan_APP\\Admin-control-settings\\Notice.txt");
+            File f6 = new File("D:\\Patan_APP\\Admin-control-settings\\User.txt");
+            File f7 = new File("D:\\Patan_APP\\Admin-control-settings\\Profle.txt");
             f1.mkdirs();
             if(!f2.exists())
             f2.createNewFile();
