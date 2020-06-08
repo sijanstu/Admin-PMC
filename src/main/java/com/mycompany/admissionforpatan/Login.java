@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
@@ -393,23 +392,11 @@ public class Login extends javax.swing.JFrame {
 
     private void SplashActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SplashActionPerformed
         // TODO add your handling code here:
-<<<<<<< Updated upstream
-//<<<<<<< Updated upstream
-        splashform sp=new splashform();
         dispose();
-        splashform.mainsp();
-        
-//=======
-=======
->>>>>>> Stashed changes
-        dispose();
+        splashform.mainsp();    
         String[] args = null;
-        splashv2.main(args);
-       
-<<<<<<< Updated upstream
-//>>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+        splashv2.main(args);     
+
     }//GEN-LAST:event_SplashActionPerformed
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
@@ -423,6 +410,7 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_nameActionPerformed
     /**
     // * @param args the command line arguments
+     * @param args
      */
     public static void main(String[] args) {
         /* Set the Nimbus look and feel */
