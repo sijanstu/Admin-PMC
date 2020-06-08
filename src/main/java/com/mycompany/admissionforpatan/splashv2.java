@@ -102,12 +102,10 @@ public class splashv2 extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here: 
         dispose();
-//<//<<<<<< Updated upstream
-        String[] args = null;
-        Login.main(args);
-//=======
-        Login.main(args);
-//>>>>>>> Stashed changes
+
+        Login ml=new Login();
+        ml.mainlogin();
+
        
     }//GEN-LAST:event_jButton1ActionPerformed
 

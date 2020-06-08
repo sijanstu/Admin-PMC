@@ -410,9 +410,8 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_nameActionPerformed
     /**
     // * @param args the command line arguments
-     * @param args
      */
-    public static void main(String[] args) {
+    public void mainlogin() {
         /* Set the Nimbus look and feel */
 
 //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -474,30 +473,9 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JTextField usename;
     // End of variables declaration//GEN-END:variables
 boolean firstlogenter = true;
-
-    public class loginVisible {
-
-        loginVisible(boolean a) {
-            setVisible(a);
-        }
-    }
     int signupv = 0;
-
-    public class statuss {
-
-        public statuss() {
-            Status st = new Status(us, ps);
-        }
-    }
     String us, ps;
-    class logvis{
-        public logvis(boolean vis)
-        {
-            setVisible(vis);
-        }
-    }
 }
-
 class Voicespeaker {
     //0 means male voice and 1 means female voice
 
