@@ -16,9 +16,9 @@ public class Splash extends javax.swing.JFrame {
      */
     public Splash() {
         initComponents();
-        load.setVisible(false);
-        cont.setVisible(false);
-        logo.setVisible(false);
+//        load.setVisible(false);
+  //      cont.setVisible(false);
+       // logo.setVisible(false);
     }
 
     /**
@@ -32,10 +32,7 @@ public class Splash extends javax.swing.JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
-        cont = new javax.swing.JButton();
         logo = new javax.swing.JLabel();
-        load = new javax.swing.JLabel();
-        click = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -61,6 +58,11 @@ public class Splash extends javax.swing.JFrame {
                 jPanel1ComponentAdded(evt);
             }
         });
+        jPanel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jPanel1MouseEntered(evt);
+            }
+        });
         jPanel1.addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentShown(java.awt.event.ComponentEvent evt) {
                 jPanel1ComponentShown(evt);
@@ -68,39 +70,15 @@ public class Splash extends javax.swing.JFrame {
         });
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        cont.setBackground(new java.awt.Color(255, 255, 255));
-        cont.setForeground(new java.awt.Color(0, 0, 255));
-        cont.setText("Next");
-        cont.setFocusable(false);
-        cont.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                contActionPerformed(evt);
-            }
-        });
-        jPanel1.add(cont, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 273, -1, 30));
-
         logo.setBackground(new java.awt.Color(255, 255, 255));
         logo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Programming-learning\\Documents\\NetBeansProjects\\AdmissionforPatan\\src\\main\\icons\\download.png")); // NOI18N
         logo.setOpaque(true);
-        jPanel1.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 220, 240));
-
-        load.setBackground(new java.awt.Color(0, 0, 255));
-        load.setFont(new java.awt.Font("Tempus Sans ITC", 0, 24)); // NOI18N
-        load.setForeground(new java.awt.Color(51, 51, 255));
-        load.setText("Loading........");
-        jPanel1.add(load, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 130, 40));
-
-        click.setBackground(new java.awt.Color(255, 255, 255));
-        click.setForeground(new java.awt.Color(0, 0, 255));
-        click.setText("Click To Agree Terms and Conditions");
-        click.setRolloverEnabled(false);
-        click.setSelected(true);
-        click.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clickActionPerformed(evt);
+        logo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                logoMouseEntered(evt);
             }
         });
-        jPanel1.add(click, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 290, -1));
+        jPanel1.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 220, 240));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -125,21 +103,19 @@ public class Splash extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jPanel1ComponentShown
 
-    private void clickActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clickActionPerformed
-        // setBounds(new java.awt.Rectangle(300, 255, 255, 255));
-        click.setVisible(false);
-        logo.setVisible(true);
-        load.setVisible(true);
-        cont.setVisible(true);
-
-
-    }//GEN-LAST:event_clickActionPerformed
-
-    private void contActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contActionPerformed
-        Login.main("");
+    private void logoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoMouseEntered
+        // TODO add your handling code here:
+        Login lm=new Login();
+        lm.mainlogin();
         dispose();
+    }//GEN-LAST:event_logoMouseEntered
 
-    }//GEN-LAST:event_contActionPerformed
+    private void jPanel1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseEntered
+        // TODO add your handling code here:
+        Login lm=new Login();
+        lm.mainlogin();
+        dispose();
+    }//GEN-LAST:event_jPanel1MouseEntered
     int a = 1;
 
     public static void main(String[] args) {
@@ -165,11 +141,8 @@ public class Splash extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton click;
-    private javax.swing.JButton cont;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JLabel load;
     private javax.swing.JLabel logo;
     // End of variables declaration//GEN-END:variables
 }
