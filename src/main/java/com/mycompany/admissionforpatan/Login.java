@@ -159,8 +159,8 @@ public class Login extends javax.swing.JFrame {
         position = new javax.swing.JTextField();
         pob1 = new javax.swing.JSeparator();
         Splash = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         neterror = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -218,7 +218,7 @@ public class Login extends javax.swing.JFrame {
                 signupbMouseClicked(evt);
             }
         });
-        jPanel2.add(signupb, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 0, 170, 30));
+        jPanel2.add(signupb, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 0, 140, 30));
         jPanel2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, 162, 10));
         jPanel2.add(pob, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, 160, 10));
 
@@ -279,7 +279,7 @@ public class Login extends javax.swing.JFrame {
                 signinbMouseClicked(evt);
             }
         });
-        jPanel2.add(signinb, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 150, 30));
+        jPanel2.add(signinb, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 120, 30));
 
         fpb1.setForeground(new java.awt.Color(255, 255, 255));
         fpb1.setText("Forgot Password?");
@@ -326,15 +326,7 @@ public class Login extends javax.swing.JFrame {
         });
         jPanel2.add(Splash, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, -1, -1));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, 320, 380));
-
-        jLabel7.setBackground(new java.awt.Color(0, 0, 255));
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(51, 51, 255));
-        jLabel7.setText("Patan Multiple Campus");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, -1));
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 0, 0));
         jLabel1.setText("X");
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -342,7 +334,15 @@ public class Login extends javax.swing.JFrame {
                 jLabel1MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 20, 40));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, 20, 20));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, 320, 380));
+
+        jLabel7.setBackground(new java.awt.Color(0, 0, 255));
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(51, 51, 255));
+        jLabel7.setText("Patan Multiple Campus");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -489,10 +489,10 @@ public class Login extends javax.swing.JFrame {
 
     private void SplashActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SplashActionPerformed
         // TODO add your handling code here:
-        Splash sp=new Splash();
-        String ss[]=new String[100];
-        com.mycompany.admissionforpatan.Splash.main(ss);
+        splashform sp=new splashform();
         dispose();
+        splashform.mainsp();
+        
     }//GEN-LAST:event_SplashActionPerformed
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
@@ -507,7 +507,7 @@ public class Login extends javax.swing.JFrame {
     /**
     // * @param args the command line arguments
      */
-    public void mainlogin() {
+    public static void main(String[] args) {
         /* Set the Nimbus look and feel */
 
 //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -585,6 +585,12 @@ boolean firstlogenter = true;
         }
     }
     String us, ps;
+    class logvis{
+        public logvis(boolean vis)
+        {
+            setVisible(vis);
+        }
+    }
 }
 
 class Voicespeaker {
@@ -610,4 +616,5 @@ class Voicespeaker {
             System.out.println(e);
         }
     }
+    
 }
