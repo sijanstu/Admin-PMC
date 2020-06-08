@@ -5,12 +5,6 @@
  */
 package com.mycompany.admissionforpatan;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.Timer;
-
 /**
  *
  * @author Programming-learning
@@ -23,8 +17,7 @@ public class Splash extends javax.swing.JFrame {
     public Splash() {
         initComponents();
         load.setVisible(false);
-            cont.setVisible(false);
-       
+        cont.setVisible(false);
         logo.setVisible(false);
     }
 
@@ -95,11 +88,13 @@ public class Splash extends javax.swing.JFrame {
         load.setFont(new java.awt.Font("Tempus Sans ITC", 0, 24)); // NOI18N
         load.setForeground(new java.awt.Color(51, 51, 255));
         load.setText("Loading........");
-        jPanel1.add(load, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 160, 40));
+        jPanel1.add(load, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 130, 40));
 
         click.setBackground(new java.awt.Color(255, 255, 255));
         click.setForeground(new java.awt.Color(0, 0, 255));
         click.setText("Click To Agree Terms and Conditions");
+        click.setRolloverEnabled(false);
+        click.setSelected(true);
         click.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 clickActionPerformed(evt);
@@ -123,7 +118,7 @@ public class Splash extends javax.swing.JFrame {
 
     private void jPanel1ComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_jPanel1ComponentAdded
         // TODO add your handling code here:
-       
+
     }//GEN-LAST:event_jPanel1ComponentAdded
 
     private void jPanel1ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jPanel1ComponentShown
@@ -131,23 +126,24 @@ public class Splash extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanel1ComponentShown
 
     private void clickActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clickActionPerformed
-           // setBounds(new java.awt.Rectangle(300, 255, 255, 255));
-            click.setVisible(false); logo.setVisible(true);  
-            load.setVisible(true);
-            cont.setVisible(true);
-            
-            
-            
+        // setBounds(new java.awt.Rectangle(300, 255, 255, 255));
+        click.setVisible(false);
+        logo.setVisible(true);
+        load.setVisible(true);
+        cont.setVisible(true);
+
+
     }//GEN-LAST:event_clickActionPerformed
 
     private void contActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contActionPerformed
-            Login.mainlogin();
-            dispose();
+        Login.main("");
+        dispose();
 
     }//GEN-LAST:event_contActionPerformed
     int a = 1;
+
     public static void main(String[] args) {
-        
+
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Windows".equals(info.getName())) {
