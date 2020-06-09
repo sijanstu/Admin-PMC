@@ -468,28 +468,10 @@ public class Admission extends javax.swing.JFrame {
         String parentnac = sparentname.getText();
         String parentnoc = sparentno.getText();
         String ch = "";
-        try {
-            File frchstu = new File("D:\\Patan_APP\\Admin-control-settings\\current login.txt");
-            try (BufferedReader fr = new BufferedReader(new FileReader(frchstu))) {
-                if (frchstu.exists()) {
-                    String strLine;
-                        up=fr.readLine();
-                }
-                fr.close();
-            }
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(Status.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(Status.class.getName()).log(Level.SEVERE, null, ex);
-        }    
-        File f = new File("C://Patan_APP/Student/" + facultyc);
-       if (!f.exists()) {
-           f.mkdir();
-       }
         if (!ch.equals(namec) && !ch.equals(facultyc) && !ch.equals(departc) && !ch.equals(parentnac) && !ch.equals(parentnoc)) {
             errs.setForeground(Color.blue);
             try {
-                File f1 = new File("D:\\Patan_APP\\Admin-control-settings\\\\"+up+"\\File\\Admission\\Students.txt");
+                File f1 = new File("D:\\Patan_APP\\Admin-control-settings\\Admission.txt");
                 try (FileWriter fw = new FileWriter(f1)) {
                     fw.append(namec+"\nName:"
                             + namec
@@ -497,7 +479,7 @@ public class Admission extends javax.swing.JFrame {
                             + "\nDepartment:" + departc + "\nCollege roll no:" + parentnoc +"\nParent's name:" + parentnac + "\n");
                     fw.close();
                     errs.setText("added to database");
-                    File fp = new File("C://Patan_APP/Admin-control-settings/Total_Student/count.txt");
+                    File fp = new File("C://Patan_APP/Admin-control-settings/Total_Student/S");
                     if (!fp.exists()) {
                         File fp1 = new File("C://Patan_APP/Admin-control-settings/Total_Student");
                         fp1.mkdir();

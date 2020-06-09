@@ -376,80 +376,12 @@ public class Search extends javax.swing.JFrame {
     }//GEN-LAST:event_sresult1ActionPerformed
 
     private void sbarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sbarActionPerformed
-try {
-            File frchstu = new File("D:\\Patan_APP\\Admin-control-settings\\current login.txt");
-            try (BufferedReader fr = new BufferedReader(new FileReader(frchstu))) {
-                if (frchstu.exists()) {
-                    String strLine;
-                        up=fr.readLine();
-                }
-                fr.close();
-            }
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(Status.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(Status.class.getName()).log(Level.SEVERE, null, ex);
-        }                sresult1.setText("");
-            sresult2.setText("");
-            sresult3.setText("");
-            sresult4.setText("");
-            sresult5.setText("");
-            next.setVisible(false);
-            ind.setVisible(false);
-            sp1.setVisible(false);
-            sp2.setVisible(false);
-            sp3.setVisible(false);
-            sp4.setVisible(false);
-            sp5.setVisible(false);
-            lastss=0;
-            lastd=0;
-       
-        for(int i=0;i<200;i++){
-            
-            ss[i]=null;}
-        try {
-            new SearchFile(sbar.getText());
-        } catch (IOException ex) {
-            Logger.getLogger(Search.class.getName()).log(Level.SEVERE, null, ex);
-        }        // TODO add your handling code here:
 
     }//GEN-LAST:event_sbarActionPerformed
 
     private void searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchActionPerformed
            hider.setVisible(true);
            hider1.setVisible(true);
-           
-        try {
-            File frchstu = new File("D:\\Patan_APP\\Admin-control-settings\\current login.txt");
-            try (BufferedReader fr = new BufferedReader(new FileReader(frchstu))) {
-                if (frchstu.exists()) {
-                    String strLine;
-                        up=fr.readLine();
-                }
-                fr.close();
-            }
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(Status.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(Status.class.getName()).log(Level.SEVERE, null, ex);
-        }                sresult1.setText("");
-            sresult2.setText("");
-            sresult3.setText("");
-            sresult4.setText("");
-            sresult5.setText("");
-            next.setVisible(false);
-            ind.setVisible(false);
-            sp1.setVisible(false);
-            sp2.setVisible(false);
-            sp3.setVisible(false);
-            sp4.setVisible(false);
-            sp5.setVisible(false);
-            lastss=0;
-            lastd=0;
-       
-        for(int i=0;i<200;i++){
-            
-            ss[i]=null;}
         try {
             new SearchFile(sbar.getText());
         } catch (IOException ex) {
@@ -578,22 +510,8 @@ String up;
 class SearchFile {
 
         public SearchFile(String sdata) throws FileNotFoundException, IOException {
-            File f1 = new File("D:\\Patan_APP\\Admin-control-settings\\"+up+"\\File\\Admission\\Students.txt");
-            File f2 = new File("D:\\Patan_APP\\Admin-control-settings\\"+up+"\\File\\Admission\\Teachers.txt");
+            File f1 = new File("D:\\Patan_APP\\Admin-control-settings\\Admission.txt");
             try (BufferedReader br1 = new BufferedReader(new FileReader(f1))) {
-                String aLine;
-                while ((aLine = br1.readLine()) != null) {
-                    if (sdata.toLowerCase().equals(aLine.toLowerCase())) {
-                        for (int i = 1; i <= 5; i++) {
-                            ss[i + lastss] = br1.readLine();
-
-                        }
-                        lastss = lastss + 5;
-                    }
-                }
-                br1.close();
-            }
-            try (BufferedReader br1 = new BufferedReader(new FileReader(f2))) {
                 String aLine;
                 while ((aLine = br1.readLine()) != null) {
                     if (sdata.toLowerCase().equals(aLine.toLowerCase())) {
