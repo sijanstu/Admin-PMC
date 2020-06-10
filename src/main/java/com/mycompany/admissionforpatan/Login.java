@@ -488,8 +488,8 @@ class Voicespeaker {
             f6.delete();//deleting previous text file
             f7.delete();//deleting previous voice file
             f8 = new FileWriter("D://voice.txt");
-            //f8.flush();
-            f8.append("Set Sapi = Wscript.CreateObject(\"SAPI.SpVoice\")\nSet sapi.Voice = sapi.GetVoices.Item(" + g + ")\nSapi.speak \"" + vv + "\"");
+            
+            f8.append("Set Sapi = Wscript.CreateObject(\"SAPI.SpVoice\")\nSet sapi.Voice = sapi.GetVoices.Item(" + g + ")\nsapi.Rate=\nSapi.speak \"" + vv + "\"");
             f8.close();
             File f = new File("D://voice.txt");
             File fg = new File("D://voice.vbs");
