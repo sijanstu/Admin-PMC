@@ -300,6 +300,12 @@ public class Login extends javax.swing.JFrame {
                     try {
                         LoginChecker lc=new LoginChecker(name.getText(), pass.getText());
                         errs.setText(lc.error());
+                        if("All Ok".equals(errs.getText()))
+                        {
+                            Chooser_home ch=new Chooser_home();
+                            ch.mainchooser();
+                            dispose();
+                        }
                     } catch (FileNotFoundException ex) {
                         Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
                     } catch (IOException ex) {

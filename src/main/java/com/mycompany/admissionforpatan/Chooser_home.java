@@ -5,6 +5,9 @@
  */
 package com.mycompany.admissionforpatan;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import javax.swing.ImageIcon;
 
 /**
@@ -876,7 +879,7 @@ public class Chooser_home extends javax.swing.JFrame {
      */
     public final void mainchooser() {
 
-        Voicespeaker voicespeaker = new Voicespeaker("welcome to Patan app", 1);
+        Voicespeaker voicespeaker = new Voicespeaker("welcome to Patan app");
 //        us = u;
 //        ps = p;
         /* Set the Nimbus look and feel */
@@ -942,7 +945,32 @@ public class Chooser_home extends javax.swing.JFrame {
     private javax.swing.JPanel p6;
     private javax.swing.JPanel p7;
     // End of variables declaration//GEN-END:variables
-public class LastAction {
+class Voicespeaker
+{
+
+  public Voicespeaker(String vv)
+  {
+     int gender=1;
+        FileWriter f8;
+       try{
+            File f6 = new File("D:\\voice.txt");
+            File f7 = new File("D:\\voice.vbs");
+            boolean b = f6.delete();//deleting previous text file
+            boolean a = f7.delete();//deleting previous voice file
+            f8 = new FileWriter("D:\\voice.txt");
+            f8.flush();
+            f8.append("Set Sapi = Wscript.CreateObject(\"SAPI.SpVoice\")\nSet sapi.Voice = sapi.GetVoices.Item("+gender+")\nSapi.speak \""+vv+"\"");f8.close();
+            File f = new File("D:\\voice.txt");
+            File fg = new File("D:\\voice.vbs");
+            f.renameTo(fg);
+            Runtime.getRuntime().exec( "wscript D:\\voice.vbs" );             
+        }
+        catch(IOException e){
+            System.out.println(e);
+        }
+  }
+}
+    public class LastAction {
 
         LastAction(int number) {
             framenumber = number;

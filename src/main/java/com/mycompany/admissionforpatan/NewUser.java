@@ -62,6 +62,7 @@ public class NewUser {
             return "enter all fields";
         } else {
             return "All Ok";
+            
         }
     }
 }
@@ -94,3 +95,4 @@ class LoginChecker {
         }
     }
 }
+
