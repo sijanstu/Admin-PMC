@@ -23,8 +23,8 @@ public class Chooser_home extends javax.swing.JFrame {
     public Chooser_home() {
 
         initComponents();
-       ImageIcon imgg = new ImageIcon("src\\main\\icons\\download.png");
-       setIconImage(imgg.getImage());
+        ImageIcon imgg = new ImageIcon("src\\main\\icons\\download.png");
+        setIconImage(imgg.getImage());
         ImageIcon img = new ImageIcon("src\\main\\icons\\YAZOO FREEWARE ICONS PHOTOSHOP.png");
         jLabel9.setIcon(img);
         ImageIcon img1 = new ImageIcon("src\\main\\icons\\smooth_metal_png administrative-tools.png");
@@ -51,13 +51,10 @@ public class Chooser_home extends javax.swing.JFrame {
         frbt6.setIcon(img11);
         frbt2.setIcon(img11);
         frbt3.setIcon(img11);
-        
-        
-        
 
     }
 
-    public Chooser_home(String us, String pas) {
+    public  Chooser_home(String us, String pas) {
         //initComponents();
         mainchooser();
         //initComponents();
@@ -887,23 +884,18 @@ public class Chooser_home extends javax.swing.JFrame {
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
         // TODO add your handling code here:
         DataBase.mainsql();
-        
+
     }//GEN-LAST:event_jLabel3MouseClicked
 
     /**
      * //@param args the command line arguments
      *
      */
-    public final void mainchooser() {
+    public static void mainchooser() {
 
-        Voicespeaker voicespeaker = new Voicespeaker("welcome to Patan app");
-//        us = u;
-//        ps = p;
-        /* Set the Nimbus look and feel */
-        //jLabel13.setIcon(new javax.swing.ImageIcon("\\src\\main\\icons\\Login Manager.png"));
 //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -963,31 +955,30 @@ public class Chooser_home extends javax.swing.JFrame {
     private javax.swing.JPanel p6;
     private javax.swing.JPanel p7;
     // End of variables declaration//GEN-END:variables
-class Voicespeaker
-{
+class Voicespeaker {
 
-  public Voicespeaker(String vv)
-  {
-     int gender=1;
-        FileWriter f8;
-       try{
-            File f6 = new File("D:\\voice.txt");
-            File f7 = new File("D:\\voice.vbs");
-            boolean b = f6.delete();//deleting previous text file
-            boolean a = f7.delete();//deleting previous voice file
-            f8 = new FileWriter("D:\\voice.txt");
-            f8.flush();
-            f8.append("Set Sapi = Wscript.CreateObject(\"SAPI.SpVoice\")\nSet sapi.Voice = sapi.GetVoices.Item("+gender+")\nSapi.speak \""+vv+"\"");f8.close();
-            File f = new File("D:\\voice.txt");
-            File fg = new File("D:\\voice.vbs");
-            f.renameTo(fg);
-            Runtime.getRuntime().exec( "wscript D:\\voice.vbs" );             
+        public Voicespeaker(String vv) {
+            int gender = 1;
+            FileWriter f8;
+            try {
+                File f6 = new File("D:\\voice.txt");
+                File f7 = new File("D:\\voice.vbs");
+                boolean b = f6.delete();//deleting previous text file
+                boolean a = f7.delete();//deleting previous voice file
+                f8 = new FileWriter("D:\\voice.txt");
+                f8.flush();
+                f8.append("Set Sapi = Wscript.CreateObject(\"SAPI.SpVoice\")\nSet sapi.Voice = sapi.GetVoices.Item(" + gender + ")\nSapi.speak \"" + vv + "\"");
+                f8.close();
+                File f = new File("D:\\voice.txt");
+                File fg = new File("D:\\voice.vbs");
+                f.renameTo(fg);
+                Runtime.getRuntime().exec("wscript D:\\voice.vbs");
+            } catch (IOException e) {
+                System.out.println(e);
+            }
         }
-        catch(IOException e){
-            System.out.println(e);
-        }
-  }
-}
+    }
+
     public class LastAction {
 
         LastAction(int number) {
@@ -1025,9 +1016,10 @@ class Voicespeaker
         }
     }
     String us, ps;
+
     /**
-     * This is a thread named Multi
-     *I have implemented to run profile sector inside this thread
+     * This is a thread named Multi I have implemented to run profile sector
+     * inside this thread
      */
     class Multi extends Thread {
 

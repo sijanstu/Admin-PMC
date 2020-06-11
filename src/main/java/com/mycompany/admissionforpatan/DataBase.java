@@ -19,6 +19,9 @@ public class DataBase extends javax.swing.JFrame {
     /** Creates new form DataBase */
     public DataBase() {
         initComponents();
+        ujdbccs.setSelected(true);
+        uldc.setSelected(false);
+        unicode.setSelected(true);
     }
 
     /** This method is called from within the constructor to
@@ -31,122 +34,263 @@ public class DataBase extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jSeparator3 = new javax.swing.JSeparator();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        zone = new javax.swing.JTextField();
+        server = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
-        jTextField3 = new javax.swing.JTextField();
+        database = new javax.swing.JTextField();
         jSeparator2 = new javax.swing.JSeparator();
         jButton1 = new javax.swing.JButton();
         result = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        port = new javax.swing.JTextField();
+        user = new javax.swing.JTextField();
+        pass = new javax.swing.JTextField();
+        ujdbccs = new javax.swing.JCheckBox();
+        unicode = new javax.swing.JCheckBox();
+        uldc = new javax.swing.JCheckBox();
+        jSeparator4 = new javax.swing.JSeparator();
+        jSeparator5 = new javax.swing.JSeparator();
+        jSeparator6 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jSeparator3.setForeground(new java.awt.Color(0, 0, 255));
+        jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 60, 10));
+
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 255));
-        jLabel1.setText("Database Setting");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 10, -1, -1));
+        jLabel1.setText("MySQL Database Setting");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 255));
         jLabel2.setText("Type:");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 66, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 66, -1, 20));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 255));
-        jLabel3.setText("Port:");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 106, -1, -1));
+        jLabel3.setText("Password:");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 160, 70, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 255));
-        jLabel4.setText("Url:");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 142, -1, -1));
+        jLabel4.setText("DataBase:");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 70, 20));
 
-        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField1.setForeground(new java.awt.Color(0, 0, 255));
-        jTextField1.setText("3306");
-        jTextField1.setBorder(null);
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        zone.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        zone.setForeground(new java.awt.Color(0, 0, 255));
+        zone.setText("UTC");
+        zone.setBorder(null);
+        zone.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                zoneActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(68, 109, 139, -1));
+        jPanel1.add(zone, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 100, 40, 20));
 
-        jTextField2.setEditable(false);
-        jTextField2.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField2.setText("localhost");
-        jTextField2.setBorder(null);
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        server.setEditable(false);
+        server.setBackground(new java.awt.Color(255, 255, 255));
+        server.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        server.setForeground(new java.awt.Color(0, 153, 153));
+        server.setText("localhost");
+        server.setBorder(null);
+        server.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                serverActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(68, 69, 139, -1));
-        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(68, 129, 86, 7));
+        jPanel1.add(server, new org.netbeans.lib.awtextra.AbsoluteConstraints(58, 69, 70, -1));
 
-        jTextField3.setForeground(new java.awt.Color(0, 0, 255));
-        jTextField3.setText("jdbc:mysql://localhost:3306/patan_admin");
-        jTextField3.setBorder(null);
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        jSeparator1.setForeground(new java.awt.Color(0, 0, 255));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 87, 70, 10));
+
+        database.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        database.setForeground(new java.awt.Color(0, 0, 255));
+        database.setText("patan_admin");
+        database.setBorder(null);
+        database.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                databaseActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(68, 145, 330, -1));
-        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(68, 165, 330, 19));
+        jPanel1.add(database, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, 90, -1));
 
+        jSeparator2.setForeground(new java.awt.Color(0, 0, 255));
+        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 150, 90, 10));
+
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setForeground(new java.awt.Color(0, 0, 255));
         jButton1.setText("Test Database");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, -1, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, -1, -1));
 
+        result.setForeground(new java.awt.Color(204, 0, 0));
         result.setText("Result:");
-        jPanel1.add(result, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 90, 220, -1));
+        jPanel1.add(result, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 150, 20));
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel5.setText("Port:");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel7.setText("Username:");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel8.setText("Server Timezone:");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 100, -1, -1));
+
+        port.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        port.setForeground(new java.awt.Color(0, 0, 255));
+        port.setText("3306");
+        port.setBorder(null);
+        port.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                portActionPerformed(evt);
+            }
+        });
+        jPanel1.add(port, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, 60, 20));
+
+        user.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        user.setForeground(new java.awt.Color(0, 0, 255));
+        user.setText("root");
+        user.setBorder(null);
+        user.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                userActionPerformed(evt);
+            }
+        });
+        jPanel1.add(user, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 110, 20));
+
+        pass.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        pass.setForeground(new java.awt.Color(0, 0, 255));
+        pass.setBorder(null);
+        pass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                passActionPerformed(evt);
+            }
+        });
+        jPanel1.add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, 110, 20));
+
+        ujdbccs.setBackground(new java.awt.Color(255, 255, 255));
+        ujdbccs.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        ujdbccs.setForeground(new java.awt.Color(0, 0, 255));
+        ujdbccs.setText("useJDBCCompliantTimezoneShift");
+        ujdbccs.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ujdbccsActionPerformed(evt);
+            }
+        });
+        jPanel1.add(ujdbccs, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
+
+        unicode.setBackground(new java.awt.Color(255, 255, 255));
+        unicode.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        unicode.setForeground(new java.awt.Color(0, 0, 255));
+        unicode.setText("Unicode");
+        unicode.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                unicodeActionPerformed(evt);
+            }
+        });
+        jPanel1.add(unicode, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, -1, -1));
+
+        uldc.setBackground(new java.awt.Color(255, 255, 255));
+        uldc.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        uldc.setForeground(new java.awt.Color(0, 0, 255));
+        uldc.setText("useLegacyDatetimeCode");
+        uldc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                uldcActionPerformed(evt);
+            }
+        });
+        jPanel1.add(uldc, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 190, -1, -1));
+
+        jSeparator4.setForeground(new java.awt.Color(0, 0, 255));
+        jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(236, 180, 80, 7));
+
+        jSeparator5.setForeground(new java.awt.Color(0, 0, 255));
+        jPanel1.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, 80, 10));
+
+        jSeparator6.setForeground(new java.awt.Color(0, 0, 255));
+        jPanel1.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 120, 50, 7));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 447, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void zoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zoneActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_zoneActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void serverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_serverActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_serverActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void databaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_databaseActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
-
+    }//GEN-LAST:event_databaseActionPerformed
+public String servertext,porttext,databasetext,zonetext,usertext,passtext;
+public boolean unicodet,ujdbct,uldct;
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+            
         try {
-            // TODO add your handling code here:
-            result.setText("result:"+new SqlConnect().Response());
+            result.setText("result:"+new SqlConnect(server.getText(),port.getText(),database.getText(),unicode.isSelected(),ujdbccs.isSelected(),uldc.isSelected(),zone.getText(),user.getText(),pass.getText()).Response());
         } catch (SQLException | ClassNotFoundException ex) {
             Logger.getLogger(DataBase.class.getName()).log(Level.SEVERE, null, ex);
         }
+    
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void portActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_portActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_portActionPerformed
+
+    private void userActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_userActionPerformed
+
+    private void passActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_passActionPerformed
+
+    private void ujdbccsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ujdbccsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ujdbccsActionPerformed
+
+    private void uldcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uldcActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_uldcActionPerformed
+
+    private void unicodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unicodeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_unicodeActionPerformed
 
     /**
      */
@@ -163,15 +307,11 @@ public class DataBase extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(DataBase.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(DataBase.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(DataBase.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(DataBase.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        
         //</editor-fold>
 
         /* Create and display the form */
@@ -181,18 +321,31 @@ public class DataBase extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField database;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSeparator jSeparator5;
+    private javax.swing.JSeparator jSeparator6;
+    private javax.swing.JTextField pass;
+    private javax.swing.JTextField port;
     private javax.swing.JLabel result;
+    private javax.swing.JTextField server;
+    private javax.swing.JCheckBox ujdbccs;
+    private javax.swing.JCheckBox uldc;
+    private javax.swing.JCheckBox unicode;
+    private javax.swing.JTextField user;
+    private javax.swing.JTextField zone;
     // End of variables declaration//GEN-END:variables
 
 }

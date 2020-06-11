@@ -1,7 +1,9 @@
 package com.mycompany.admissionforpatan;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -10,6 +12,7 @@ import javax.swing.ImageIcon;
 
 //@author Sijan Bhandari
 public class Login extends javax.swing.JFrame {
+
     public Login() {
         initComponents();
         ImageIcon imgg = new ImageIcon("src\\main\\icons\\download.png");
@@ -29,6 +32,7 @@ public class Login extends javax.swing.JFrame {
     public void main() {
         setVisible(true);
     }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -59,6 +63,7 @@ public class Login extends javax.swing.JFrame {
         pob1 = new javax.swing.JSeparator();
         Splash = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         neterror = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
@@ -67,7 +72,7 @@ public class Login extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBounds(new java.awt.Rectangle(300, 250, 250, 250));
+        setBounds(new java.awt.Rectangle(350, 200, 200, 200));
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -136,7 +141,7 @@ public class Login extends javax.swing.JFrame {
                 fpbMouseClicked(evt);
             }
         });
-        jPanel2.add(fpb, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 320, 40));
+        jPanel2.add(fpb, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 90, 40));
 
         sbutton.setBackground(new java.awt.Color(0, 0, 204));
         sbutton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -153,7 +158,7 @@ public class Login extends javax.swing.JFrame {
         jPanel2.add(err, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 150, 160, 10));
 
         errs.setForeground(new java.awt.Color(255, 0, 0));
-        jPanel2.add(errs, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 220, 150, 30));
+        jPanel2.add(errs, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, 150, 30));
 
         errp.setForeground(new java.awt.Color(255, 0, 0));
         jPanel2.add(errp, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 160, 20));
@@ -235,6 +240,14 @@ public class Login extends javax.swing.JFrame {
         });
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, 20, 20));
 
+        jButton1.setText("Direct login");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 300, -1, -1));
+
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, 320, 380));
 
         jLabel7.setBackground(new java.awt.Color(0, 0, 255));
@@ -279,55 +292,58 @@ public class Login extends javax.swing.JFrame {
         });
         neterror.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(97, 133, -1, -1));
 
-        getContentPane().add(neterror, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 90, -1, -1));
+        getContentPane().add(neterror, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, 340, 210));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+String u, p;
     private void sbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sbuttonActionPerformed
-       
+
         if ("".equals(name.getText())) {
             err.setText("enter your username");
-    
+
         } else {
             err.setText("");
             if ("".equals(pass.getText())) {
                 errp.setText("enter your password");
-              
+
             } else {
                 errp.setText("");
                 if (signupv == 0) {
                     try {
-                        LoginChecker lc=new LoginChecker(name.getText(), pass.getText());
-                        errs.setText(lc.error());
-                        if("All Ok".equals(errs.getText()))
-                        {
-                            Chooser_home ch=new Chooser_home();
-                            ch.mainchooser();
-                            dispose();
-                        }
-                    } catch (FileNotFoundException ex) {
-                        Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-                    } catch (IOException ex) {
-                        Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                } else {
-                   if("".equals(name.getText())||"".equals(usename.getText()))
-                   {
-                       errs.setText("enter all details");
-                   }
-                   else
-                    try {
-                        NewUser nu=new NewUser(name.getText(), pass.getText(),usename.getText(),position.getText());
-                        errs.setText(nu.error());
-                    } catch (IOException ex) {
-                        Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                }
+                        File fc = new File("C:\\User_pmcadmin");
+                        File fc1 = new File("C:\\User_pmcadmin\\login.txt");
+                        if (fc.exists() && fc1.exists()) {
+                            try (BufferedReader br = new BufferedReader(new FileReader(fc1))) {
+                                u = br.readLine();
+                                p = br.readLine();
+                                br.close();
 
+                            } catch (IOException ex) {
+                                Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+                                errs.setText("error");
+                            }
+                                           
+                            String passc="Password: "+pass.getText();
+                            String userc="Username: "+name.getText();
+                            if (passc.equals(p) && userc.equals("Username: "+u)) {
+                                Chooser_home.mainchooser();
+                                dispose();
+                            }
+                            else{
+                                errs.setText("wrong details");
+                            }
+                        } else {
+                            errs.setText("Login Failed");
+                        }
+                    }
+                    catch(Exception e){
+                        errs.setText("error");
+                    }
+
+                }
             }
         }
-
     }//GEN-LAST:event_sbuttonActionPerformed
 
     private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
@@ -371,7 +387,7 @@ public class Login extends javax.swing.JFrame {
     private void signinbMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signinbMouseClicked
         // TODO add your handling code here:
         labelname.setVisible(false);
-        signupv=0;
+        signupv = 0;
         usename.setVisible(false);
         pob.setVisible(false);
         sbutton.setText("Sign in");
@@ -401,7 +417,7 @@ public class Login extends javax.swing.JFrame {
         dispose();
         //splashform.mainsp();    
         String[] args = null;
-        splashv2.main(args);     
+        splashv2.main(args);
 
     }//GEN-LAST:event_SplashActionPerformed
 
@@ -412,10 +428,16 @@ public class Login extends javax.swing.JFrame {
 
     private void nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameActionPerformed
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_nameActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+Chooser_home.mainchooser();
+dispose();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
     /**
-    // * @param args the command line arguments
+     * // * @param args the command line arguments
      */
     public void mainlogin() {
         /* Set the Nimbus look and feel */
@@ -452,6 +474,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel errs;
     private javax.swing.JLabel fpb;
     private javax.swing.JLabel fpb1;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -482,6 +505,7 @@ boolean firstlogenter = true;
     int signupv = 0;
     String us, ps;
 }
+
 class Voicespeaker {
     //0 means male voice and 1 means female voice
 
@@ -494,7 +518,7 @@ class Voicespeaker {
             f6.delete();//deleting previous text file
             f7.delete();//deleting previous voice file
             f8 = new FileWriter("D://voice.txt");
-            
+
             f8.append("Set Sapi = Wscript.CreateObject(\"SAPI.SpVoice\")\nSet sapi.Voice = sapi.GetVoices.Item(" + g + ")\nsapi.Rate=\nSapi.speak \"" + vv + "\"");
             f8.close();
             File f = new File("D://voice.txt");
@@ -505,5 +529,5 @@ class Voicespeaker {
             System.out.println(e);
         }
     }
-    
+
 }
