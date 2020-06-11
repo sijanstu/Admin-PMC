@@ -264,6 +264,7 @@ public boolean unicodet,ujdbct,uldct;
             result.setText("result:"+new SqlConnect(server.getText(),port.getText(),database.getText(),unicode.isSelected(),ujdbccs.isSelected(),uldc.isSelected(),zone.getText(),user.getText(),pass.getText()).Response());
         } catch (SQLException | ClassNotFoundException ex) {
             Logger.getLogger(DataBase.class.getName()).log(Level.SEVERE, null, ex);
+            result.setText("database error");
         }
     
     }//GEN-LAST:event_jButton1ActionPerformed
