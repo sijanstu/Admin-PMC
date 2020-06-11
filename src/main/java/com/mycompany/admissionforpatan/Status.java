@@ -3,9 +3,6 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.IOException;
-import java.sql.Date;
-import java.time.LocalDate;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 public class Status extends javax.swing.JFrame {
@@ -15,7 +12,7 @@ public class Status extends javax.swing.JFrame {
     public Status(String up, String ps) {
         new Status();
         mainsta(up, ps);
-
+        //MySQL ml=new MYSQL();
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents

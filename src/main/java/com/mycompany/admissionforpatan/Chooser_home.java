@@ -110,6 +110,7 @@ public class Chooser_home extends javax.swing.JFrame {
         jSeparator22 = new javax.swing.JSeparator();
         jSeparator23 = new javax.swing.JSeparator();
         jSeparator26 = new javax.swing.JSeparator();
+        jLabel3 = new javax.swing.JLabel();
 
         p3.setBackground(new java.awt.Color(51, 255, 204));
         p3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -523,6 +524,16 @@ public class Chooser_home extends javax.swing.JFrame {
         jSeparator26.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPanel1.add(jSeparator26, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 40, 10, 300));
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel3.setText("DataBase");
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, -1, -1));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 670, 350));
 
         pack();
@@ -873,6 +884,12 @@ public class Chooser_home extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_frbt3MouseClicked
 
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+        // TODO add your handling code here:
+        DataBase.mainsql();
+        
+    }//GEN-LAST:event_jLabel3MouseClicked
+
     /**
      * //@param args the command line arguments
      *
@@ -923,6 +940,7 @@ public class Chooser_home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
