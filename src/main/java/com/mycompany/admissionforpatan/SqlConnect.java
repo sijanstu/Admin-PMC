@@ -35,7 +35,7 @@ public class SqlConnect {
         p = pass;
         File f1=new File("C//SQLPMC");if(!f1.exists())f1.mkdirs();File f2=new File(f1+"/cofig.txt");if(!f2.exists())f2.createNewFile();
         FileWriter fw=new FileWriter(f2);
-        fw.
+        
         con = DriverManager.getConnection(convalue, user, pass);
         if (con != null) {
             response = "Connected to server";
@@ -70,6 +70,7 @@ public class SqlConnect {
     }
 
 }
+
 
 
 
