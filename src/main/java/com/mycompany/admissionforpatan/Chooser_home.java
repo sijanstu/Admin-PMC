@@ -73,9 +73,9 @@ public class Chooser_home extends javax.swing.JFrame {
 
         p3 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
+        jSeparator27 = new javax.swing.JSeparator();
         jSeparator20 = new javax.swing.JSeparator();
         jSeparator21 = new javax.swing.JSeparator();
-        jSeparator25 = new javax.swing.JSeparator();
         jSeparator24 = new javax.swing.JSeparator();
         p1 = new javax.swing.JPanel();
         frbt3 = new javax.swing.JLabel();
@@ -102,12 +102,15 @@ public class Chooser_home extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         frbt5 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         bckbtn = new javax.swing.JLabel();
         frbt = new javax.swing.JLabel();
         jSeparator22 = new javax.swing.JSeparator();
         jSeparator23 = new javax.swing.JSeparator();
         jSeparator26 = new javax.swing.JSeparator();
-        jLabel3 = new javax.swing.JLabel();
+        jSeparator25 = new javax.swing.JSeparator();
+        jSeparator28 = new javax.swing.JSeparator();
+        jSeparator29 = new javax.swing.JSeparator();
 
         p3.setBackground(new java.awt.Color(51, 255, 204));
         p3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -140,6 +143,11 @@ public class Chooser_home extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jSeparator27.setBackground(new java.awt.Color(0, 0, 255));
+        jSeparator27.setForeground(new java.awt.Color(0, 0, 255));
+        jSeparator27.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel1.add(jSeparator27, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 40, 10, 300));
+
         jSeparator20.setBackground(new java.awt.Color(0, 0, 255));
         jSeparator20.setForeground(new java.awt.Color(0, 0, 255));
         jSeparator20.setOrientation(javax.swing.SwingConstants.VERTICAL);
@@ -150,14 +158,9 @@ public class Chooser_home extends javax.swing.JFrame {
         jSeparator21.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPanel1.add(jSeparator21, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 10, 300));
 
-        jSeparator25.setBackground(new java.awt.Color(0, 0, 255));
-        jSeparator25.setForeground(new java.awt.Color(0, 0, 255));
-        jSeparator25.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jPanel1.add(jSeparator25, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 40, 10, 300));
-
         jSeparator24.setForeground(new java.awt.Color(0, 0, 255));
         jSeparator24.setOpaque(true);
-        jPanel1.add(jSeparator24, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 170, 670, 10));
+        jPanel1.add(jSeparator24, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 170, 670, -1));
 
         p1.setBackground(new java.awt.Color(255, 255, 255));
         p1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -480,7 +483,17 @@ public class Chooser_home extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tempus Sans ITC", 0, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 51, 255));
         jLabel1.setText("Welcome To Patan Multiple Campus App");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 434, 30));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 420, 30));
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel3.setText("DataBase");
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 20, 80, -1));
 
         bckbtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -521,15 +534,19 @@ public class Chooser_home extends javax.swing.JFrame {
         jSeparator26.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPanel1.add(jSeparator26, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 40, 10, 300));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 255));
-        jLabel3.setText("DataBase");
-        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel3MouseClicked(evt);
-            }
-        });
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, -1, -1));
+        jSeparator25.setBackground(new java.awt.Color(0, 0, 255));
+        jSeparator25.setForeground(new java.awt.Color(0, 0, 255));
+        jSeparator25.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel1.add(jSeparator25, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 20, 10, 20));
+
+        jSeparator28.setBackground(new java.awt.Color(0, 0, 255));
+        jSeparator28.setForeground(new java.awt.Color(0, 0, 255));
+        jSeparator28.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel1.add(jSeparator28, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 20, 10, 20));
+
+        jSeparator29.setBackground(new java.awt.Color(0, 0, 255));
+        jSeparator29.setForeground(new java.awt.Color(0, 0, 255));
+        jPanel1.add(jSeparator29, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 20, 90, 10));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 670, 350));
 
@@ -947,6 +964,9 @@ public class Chooser_home extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator24;
     private javax.swing.JSeparator jSeparator25;
     private javax.swing.JSeparator jSeparator26;
+    private javax.swing.JSeparator jSeparator27;
+    private javax.swing.JSeparator jSeparator28;
+    private javax.swing.JSeparator jSeparator29;
     private javax.swing.JPanel p1;
     private javax.swing.JPanel p2;
     private javax.swing.JPanel p3;

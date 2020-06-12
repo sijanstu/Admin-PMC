@@ -1,7 +1,9 @@
 package com.mycompany.admissionforpatan;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+
 /**
  *
  * @author Sijan Bhandari
@@ -13,48 +15,54 @@ import java.sql.SQLException;
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.18</version>
         </dependency>
-*/
+ */
 public class SqlConnect {
+
     String response;
-    SqlConnect(String server, String port, String database, boolean unicode, boolean ugdbcc, boolean uldc, String zone, String user, String pass)throws SQLException, ClassNotFoundException {
-        Class.forName("com.mysql.jdbc.Driver");  
-        Connection con;//=DriverManager.getConnection("jdbc:mysql://localhost:3306/patan_admin","root","");
-        con = DriverManager.getConnection("jdbc:mysql://"+server+":"+port+"/"+database+"?"+"useUnicode="+unicode+"&useJDBCCompliantTimezoneShift="+ugdbcc+"&useLegacyDatetimeCode="+uldc+"&serverTimezone="+zone,user,pass);
+    int retc = 0;
+    String convalue;
+    String u, p;
+    SqlConnect(String server, String port, String database, boolean unicode, boolean ugdbcc, boolean uldc, String zone, String user, String pass) throws SQLException, ClassNotFoundException {
+        //Class.forName("com.mysql.jdbc.Driver");  
+        try{
+        Connection con;
+        convalue = "jdbc:mysql://" + server + ":" + port + "/" + database + "?" + "useUnicode=" + unicode + "&useJDBCCompliantTimezoneShift=" + ugdbcc + "&useLegacyDatetimeCode=" + uldc + "&serverTimezone=" + zone;
+        u = user;
+        p = pass;
+        con = DriverManager.getConnection(convalue, user, pass);
         if (con != null) {
-            response="Connected to server";
+            response = "Connected to server";
             con.close();
+        } else {
+            response = "null database returned";
         }
-        else{
-            response="Something wrong";
+        }
+        catch(SQLException e)
+        {
+            response="connection error";
         }
     }
-    public String Response()
-    {
+    public String Response() {
         return response;
     }
-    
+    public String Returncon() {
+        switch (retc) {
+            case 0:
+                retc++;
+                return convalue;
+               
+            case 1:
+                retc++;
+                return u;
+                
+            default:
+                retc++;
+                return p;
+        }
+        
+    }
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

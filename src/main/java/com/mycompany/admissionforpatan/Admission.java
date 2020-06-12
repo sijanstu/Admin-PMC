@@ -41,7 +41,6 @@ public class Admission extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel8 = new javax.swing.JPanel();
-        jLabel37 = new javax.swing.JLabel();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jPanel9 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
@@ -98,17 +97,14 @@ public class Admission extends javax.swing.JFrame {
         jSeparator51 = new javax.swing.JSeparator();
         jSeparator52 = new javax.swing.JSeparator();
         jSeparator53 = new javax.swing.JSeparator();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel37 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
 
         jPanel8.setBackground(new java.awt.Color(255, 255, 255));
         jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel37.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel37.setForeground(new java.awt.Color(0, 0, 255));
-        jLabel37.setText("Admission Section");
-        jPanel8.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, 159, -1));
 
         jTabbedPane2.setBackground(new java.awt.Color(255, 255, 255));
         jTabbedPane2.setForeground(new java.awt.Color(0, 0, 255));
@@ -436,7 +432,32 @@ public class Admission extends javax.swing.JFrame {
         jSeparator53.setBackground(new java.awt.Color(0, 0, 255));
         jSeparator53.setForeground(new java.awt.Color(0, 0, 255));
         jSeparator53.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jPanel8.add(jSeparator53, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 0, 10, 60));
+        jPanel8.add(jSeparator53, new org.netbeans.lib.awtextra.AbsoluteConstraints(338, 0, -1, 60));
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 102));
+
+        jLabel37.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel37.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel37.setText("Admission Section");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(99, Short.MAX_VALUE)
+                .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(82, 82, 82))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel37)
+                .addContainerGap(27, Short.MAX_VALUE))
+        );
+
+        jPanel8.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 340, 60));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -672,6 +693,7 @@ public class Admission extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
