@@ -62,7 +62,7 @@ public class Profile extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         name = new javax.swing.JLabel();
         position = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        can = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBounds(new java.awt.Rectangle(250, 250, 250, 250));
@@ -213,20 +213,20 @@ public class Profile extends javax.swing.JFrame {
         position.setText("Position:");
         jPanel2.add(position, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, -1, -1));
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(204, 0, 0));
-        jButton1.setText("X");
-        jButton1.setBorder(null);
-        jButton1.setBorderPainted(false);
-        jButton1.setFocusPainted(false);
-        jButton1.setFocusable(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        can.setBackground(new java.awt.Color(255, 255, 255));
+        can.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        can.setForeground(new java.awt.Color(204, 0, 0));
+        can.setText("X");
+        can.setBorder(null);
+        can.setBorderPainted(false);
+        can.setFocusPainted(false);
+        can.setFocusable(false);
+        can.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                canActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 20, 20));
+        jPanel2.add(can, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 20, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -265,11 +265,11 @@ int user=0;
         
     }//GEN-LAST:event_jPanel2ComponentShown
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void canActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_canActionPerformed
         // TODO add your handling code here:
         dispose();
         
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_canActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
@@ -353,8 +353,8 @@ String up;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton can;
     private javax.swing.JLabel errch;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel23;

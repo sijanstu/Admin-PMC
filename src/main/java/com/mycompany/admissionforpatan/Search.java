@@ -5,11 +5,11 @@
  */
 package com.mycompany.admissionforpatan;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
@@ -25,16 +25,8 @@ public class Search extends javax.swing.JFrame {
      */
     public Search() {
         initComponents();
-        next.setVisible(false);
         ImageIcon img = new ImageIcon("src\\main\\icons\\BRIGHTS SEARCH.png");
         setIconImage(img.getImage());
-        ind.setVisible(false);
-        sp1.setVisible(false);
-        sp2.setVisible(false);
-        sp3.setVisible(false);
-        sp4.setVisible(false);
-        sp5.setVisible(false);
-        pre.setVisible(false);
     }
 
     /**
@@ -51,12 +43,10 @@ public class Search extends javax.swing.JFrame {
         jSeparator18 = new javax.swing.JSeparator();
         jSeparator21 = new javax.swing.JSeparator();
         search = new javax.swing.JButton();
+        jSeparator16 = new javax.swing.JSeparator();
         sresult1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        sresult5 = new javax.swing.JTextField();
         sbar = new javax.swing.JTextField();
-        hider1 = new javax.swing.JPanel();
-        hider = new javax.swing.JPanel();
         jSeparator31 = new javax.swing.JSeparator();
         jSeparator28 = new javax.swing.JSeparator();
         jSeparator27 = new javax.swing.JSeparator();
@@ -73,7 +63,6 @@ public class Search extends javax.swing.JFrame {
         pre = new javax.swing.JButton();
         p = new javax.swing.JLabel();
         jSeparator15 = new javax.swing.JSeparator();
-        jSeparator16 = new javax.swing.JSeparator();
         next = new javax.swing.JButton();
         jSeparator19 = new javax.swing.JSeparator();
         jSeparator20 = new javax.swing.JSeparator();
@@ -85,6 +74,15 @@ public class Search extends javax.swing.JFrame {
         jSeparator30 = new javax.swing.JSeparator();
         jSeparator32 = new javax.swing.JSeparator();
         jSeparator33 = new javax.swing.JSeparator();
+        sresult6 = new javax.swing.JTextField();
+        sresult5 = new javax.swing.JTextField();
+        sp6 = new javax.swing.JSeparator();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -125,6 +123,10 @@ public class Search extends javax.swing.JFrame {
         });
         jPanel1.add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 50, 70, 30));
 
+        jSeparator16.setBackground(new java.awt.Color(0, 0, 255));
+        jSeparator16.setForeground(new java.awt.Color(0, 0, 255));
+        jPanel1.add(jSeparator16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 370, 530, 10));
+
         sresult1.setEditable(false);
         sresult1.setBackground(new java.awt.Color(255, 255, 255));
         sresult1.setFont(new java.awt.Font("Tempus Sans ITC", 0, 18)); // NOI18N
@@ -138,22 +140,12 @@ public class Search extends javax.swing.JFrame {
                 sresult1ActionPerformed(evt);
             }
         });
-        jPanel1.add(sresult1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 470, 32));
+        jPanel1.add(sresult1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 80, 370, 32));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 255));
         jLabel1.setText("Search");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, -1, -1));
-
-        sresult5.setEditable(false);
-        sresult5.setBackground(new java.awt.Color(255, 255, 255));
-        sresult5.setFont(new java.awt.Font("Tempus Sans ITC", 0, 18)); // NOI18N
-        sresult5.setForeground(new java.awt.Color(0, 0, 255));
-        sresult5.setBorder(null);
-        sresult5.setCaretColor(new java.awt.Color(0, 0, 255));
-        sresult5.setFocusable(false);
-        sresult5.setOpaque(false);
-        jPanel1.add(sresult5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 470, 32));
 
         sbar.setFont(new java.awt.Font("Tempus Sans ITC", 0, 18)); // NOI18N
         sbar.setForeground(new java.awt.Color(0, 0, 255));
@@ -174,54 +166,24 @@ public class Search extends javax.swing.JFrame {
         });
         jPanel1.add(sbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 40, 240, 32));
 
-        hider1.setBackground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout hider1Layout = new javax.swing.GroupLayout(hider1);
-        hider1.setLayout(hider1Layout);
-        hider1Layout.setHorizontalGroup(
-            hider1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 130, Short.MAX_VALUE)
-        );
-        hider1Layout.setVerticalGroup(
-            hider1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 30, Short.MAX_VALUE)
-        );
-
-        jPanel1.add(hider1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 130, -1));
-
-        hider.setBackground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout hiderLayout = new javax.swing.GroupLayout(hider);
-        hider.setLayout(hiderLayout);
-        hiderLayout.setHorizontalGroup(
-            hiderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 140, Short.MAX_VALUE)
-        );
-        hiderLayout.setVerticalGroup(
-            hiderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 30, Short.MAX_VALUE)
-        );
-
-        jPanel1.add(hider, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 280, 140, 30));
-
         jSeparator31.setBackground(new java.awt.Color(0, 0, 255));
         jSeparator31.setForeground(new java.awt.Color(0, 0, 255));
         jSeparator31.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jPanel1.add(jSeparator31, new org.netbeans.lib.awtextra.AbsoluteConstraints(488, 290, -1, 20));
+        jPanel1.add(jSeparator31, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 350, -1, 20));
 
         jSeparator28.setBackground(new java.awt.Color(0, 0, 255));
         jSeparator28.setForeground(new java.awt.Color(0, 0, 255));
         jSeparator28.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jPanel1.add(jSeparator28, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 290, -1, 20));
+        jPanel1.add(jSeparator28, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 350, -1, 20));
 
         jSeparator27.setBackground(new java.awt.Color(0, 0, 255));
         jSeparator27.setForeground(new java.awt.Color(0, 0, 255));
         jSeparator27.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jPanel1.add(jSeparator27, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 290, -1, 20));
+        jPanel1.add(jSeparator27, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, -1, 20));
 
         jSeparator29.setBackground(new java.awt.Color(0, 0, 255));
         jSeparator29.setForeground(new java.awt.Color(0, 0, 255));
-        jPanel1.add(jSeparator29, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 100, -1));
+        jPanel1.add(jSeparator29, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, 100, -1));
 
         sresult2.setEditable(false);
         sresult2.setBackground(new java.awt.Color(255, 255, 255));
@@ -231,7 +193,7 @@ public class Search extends javax.swing.JFrame {
         sresult2.setCaretColor(new java.awt.Color(0, 0, 255));
         sresult2.setFocusable(false);
         sresult2.setOpaque(false);
-        jPanel1.add(sresult2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 470, 32));
+        jPanel1.add(sresult2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 370, 32));
 
         sresult3.setEditable(false);
         sresult3.setBackground(new java.awt.Color(255, 255, 255));
@@ -241,7 +203,7 @@ public class Search extends javax.swing.JFrame {
         sresult3.setCaretColor(new java.awt.Color(0, 0, 255));
         sresult3.setFocusable(false);
         sresult3.setOpaque(false);
-        jPanel1.add(sresult3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 470, 32));
+        jPanel1.add(sresult3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, 370, 32));
 
         sresult4.setEditable(false);
         sresult4.setBackground(new java.awt.Color(255, 255, 255));
@@ -251,7 +213,7 @@ public class Search extends javax.swing.JFrame {
         sresult4.setCaretColor(new java.awt.Color(0, 0, 255));
         sresult4.setFocusable(false);
         sresult4.setOpaque(false);
-        jPanel1.add(sresult4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 470, 32));
+        jPanel1.add(sresult4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 200, 370, 32));
 
         sp1.setForeground(new java.awt.Color(0, 0, 255));
         jPanel1.add(sp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 470, 10));
@@ -266,7 +228,7 @@ public class Search extends javax.swing.JFrame {
         jPanel1.add(sp4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 470, 10));
 
         sp5.setForeground(new java.awt.Color(0, 0, 255));
-        jPanel1.add(sp5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 470, 10));
+        jPanel1.add(sp5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 470, 10));
 
         ind.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         ind.setForeground(new java.awt.Color(0, 0, 204));
@@ -283,20 +245,16 @@ public class Search extends javax.swing.JFrame {
                 preActionPerformed(evt);
             }
         });
-        jPanel1.add(pre, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 80, 20));
+        jPanel1.add(pre, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 80, 20));
 
         p.setForeground(new java.awt.Color(0, 0, 255));
         p.setText("Page:1");
-        jPanel1.add(p, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 290, -1, -1));
+        jPanel1.add(p, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 350, -1, -1));
 
         jSeparator15.setBackground(new java.awt.Color(0, 0, 255));
         jSeparator15.setForeground(new java.awt.Color(0, 0, 255));
         jSeparator15.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPanel1.add(jSeparator15, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 30, 20, 50));
-
-        jSeparator16.setBackground(new java.awt.Color(0, 0, 255));
-        jSeparator16.setForeground(new java.awt.Color(0, 0, 255));
-        jPanel1.add(jSeparator16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 530, 10));
 
         next.setBackground(new java.awt.Color(0, 0, 255));
         next.setForeground(new java.awt.Color(0, 0, 204));
@@ -309,7 +267,7 @@ public class Search extends javax.swing.JFrame {
                 nextActionPerformed(evt);
             }
         });
-        jPanel1.add(next, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 290, -1, -1));
+        jPanel1.add(next, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 350, -1, -1));
 
         jSeparator19.setBackground(new java.awt.Color(0, 0, 255));
         jSeparator19.setForeground(new java.awt.Color(0, 0, 255));
@@ -318,7 +276,7 @@ public class Search extends javax.swing.JFrame {
         jSeparator20.setBackground(new java.awt.Color(0, 0, 255));
         jSeparator20.setForeground(new java.awt.Color(0, 0, 255));
         jSeparator20.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jPanel1.add(jSeparator20, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 10, 310));
+        jPanel1.add(jSeparator20, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 10, 370));
 
         jSeparator22.setBackground(new java.awt.Color(0, 0, 255));
         jSeparator22.setForeground(new java.awt.Color(0, 0, 255));
@@ -346,16 +304,63 @@ public class Search extends javax.swing.JFrame {
         jSeparator30.setBackground(new java.awt.Color(0, 0, 255));
         jSeparator30.setForeground(new java.awt.Color(0, 0, 255));
         jSeparator30.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jPanel1.add(jSeparator30, new org.netbeans.lib.awtextra.AbsoluteConstraints(108, 290, 10, 20));
+        jPanel1.add(jSeparator30, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 350, 10, 20));
 
         jSeparator32.setBackground(new java.awt.Color(0, 0, 255));
         jSeparator32.setForeground(new java.awt.Color(0, 0, 255));
-        jPanel1.add(jSeparator32, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 288, 100, -1));
+        jPanel1.add(jSeparator32, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 348, 100, -1));
 
         jSeparator33.setBackground(new java.awt.Color(0, 0, 255));
         jSeparator33.setForeground(new java.awt.Color(0, 0, 255));
         jSeparator33.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jPanel1.add(jSeparator33, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 10, 310));
+        jPanel1.add(jSeparator33, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 10, 370));
+
+        sresult6.setEditable(false);
+        sresult6.setBackground(new java.awt.Color(255, 255, 255));
+        sresult6.setFont(new java.awt.Font("Tempus Sans ITC", 0, 18)); // NOI18N
+        sresult6.setForeground(new java.awt.Color(0, 0, 255));
+        sresult6.setBorder(null);
+        sresult6.setCaretColor(new java.awt.Color(0, 0, 255));
+        sresult6.setFocusable(false);
+        sresult6.setOpaque(false);
+        jPanel1.add(sresult6, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 370, 40));
+
+        sresult5.setEditable(false);
+        sresult5.setBackground(new java.awt.Color(255, 255, 255));
+        sresult5.setFont(new java.awt.Font("Tempus Sans ITC", 0, 18)); // NOI18N
+        sresult5.setForeground(new java.awt.Color(0, 0, 255));
+        sresult5.setBorder(null);
+        sresult5.setCaretColor(new java.awt.Color(0, 0, 255));
+        sresult5.setFocusable(false);
+        sresult5.setOpaque(false);
+        jPanel1.add(sresult5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, 370, 32));
+
+        sp6.setForeground(new java.awt.Color(0, 0, 255));
+        jPanel1.add(sp6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 470, 10));
+
+        jLabel3.setFont(new java.awt.Font("Tempus Sans ITC", 0, 18)); // NOI18N
+        jLabel3.setText("Roll no:");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 100, 40));
+
+        jLabel4.setFont(new java.awt.Font("Tempus Sans ITC", 0, 18)); // NOI18N
+        jLabel4.setText("Name:");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 75, 60, 40));
+
+        jLabel5.setFont(new java.awt.Font("Tempus Sans ITC", 0, 18)); // NOI18N
+        jLabel5.setText("Parent:");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 60, 40));
+
+        jLabel6.setFont(new java.awt.Font("Tempus Sans ITC", 0, 18)); // NOI18N
+        jLabel6.setText("Faculty:");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 60, 40));
+
+        jLabel7.setFont(new java.awt.Font("Tempus Sans ITC", 0, 18)); // NOI18N
+        jLabel7.setText("Department:");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 100, 40));
+
+        jLabel8.setFont(new java.awt.Font("Tempus Sans ITC", 0, 18)); // NOI18N
+        jLabel8.setText("Number:");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 100, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -365,7 +370,7 @@ public class Search extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 383, Short.MAX_VALUE)
         );
 
         pack();
@@ -380,11 +385,18 @@ public class Search extends javax.swing.JFrame {
     }//GEN-LAST:event_sbarActionPerformed
 
     private void searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchActionPerformed
-           hider.setVisible(true);
-           hider1.setVisible(true);
+            lastd=0;
+            lastss=0;
+            sresult1.setText("");
+            sresult2.setText("");
+            sresult3.setText("");
+            sresult4.setText("");
+            sresult5.setText("");
+            sresult6.setText("");
+            
         try {
-            new SearchFile(sbar.getText());
-        } catch (IOException ex) {
+            new SearchDB();
+        } catch (SQLException ex) {
             Logger.getLogger(Search.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_searchActionPerformed
@@ -392,15 +404,14 @@ public class Search extends javax.swing.JFrame {
     private void nextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextActionPerformed
         // TODO add your handling code here:
 
-            sresult1.setText(ss[lastd+1]);
-            sresult2.setText(ss[lastd+2]);
-            sresult3.setText(ss[lastd+3]);
-            sresult4.setText(ss[lastd+4]);
-            sresult5.setText(ss[lastd+5]);
-            lastd=lastd+5;
-            pre.setVisible(true);
-            hider1.setVisible(false);
-            p.setText("Page:"+lastd/5);
+        sresult1.setText(ss[lastd + 1]);
+        sresult2.setText(ss[lastd + 2]);
+        sresult3.setText(ss[lastd + 3]);
+        sresult4.setText(ss[lastd + 4]);
+        sresult5.setText(ss[lastd + 5]);
+        sresult6.setText(ss[lastd + 6]);
+        lastd = lastd + 6;
+        p.setText("Page:" + lastd / 6);
     }//GEN-LAST:event_nextActionPerformed
 
     private void sbarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sbarMouseEntered
@@ -420,14 +431,15 @@ public class Search extends javax.swing.JFrame {
     }//GEN-LAST:event_sbarMouseClicked
 
     private void preActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_preActionPerformed
-            
-            sresult1.setText(ss[1]);
-            sresult2.setText(ss[2]);
-            sresult3.setText(ss[3]);
-            sresult4.setText(ss[4]);
-            sresult5.setText(ss[5]);
-            lastd=5;
-            p.setText("Page:1");
+
+        sresult1.setText(ss[1]);
+        sresult2.setText(ss[2]);
+        sresult3.setText(ss[3]);
+        sresult4.setText(ss[4]);
+        sresult5.setText(ss[5]);
+        sresult6.setText(ss[6]);
+        lastd = 6;
+        p.setText("Page:1");
         // TODO add your handling code here:
     }//GEN-LAST:event_preActionPerformed
 
@@ -465,13 +477,17 @@ public class Search extends javax.swing.JFrame {
             new Search().setVisible(true);
         });
     }
-String up;
+    String up;
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel hider;
-    private javax.swing.JPanel hider1;
     private javax.swing.JLabel ind;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator15;
     private javax.swing.JSeparator jSeparator16;
@@ -501,48 +517,64 @@ String up;
     private javax.swing.JSeparator sp3;
     private javax.swing.JSeparator sp4;
     private javax.swing.JSeparator sp5;
+    private javax.swing.JSeparator sp6;
     private javax.swing.JTextField sresult1;
     private javax.swing.JTextField sresult2;
     private javax.swing.JTextField sresult3;
     private javax.swing.JTextField sresult4;
     private javax.swing.JTextField sresult5;
+    private javax.swing.JTextField sresult6;
     // End of variables declaration//GEN-END:variables
-class SearchFile {
 
-        public SearchFile(String sdata) throws FileNotFoundException, IOException {
-            File f1 = new File("D:\\Patan_APP\\Admin-control-settings\\Admission.txt");
-            try (BufferedReader br1 = new BufferedReader(new FileReader(f1))) {
-                String aLine;
-                while ((aLine = br1.readLine()) != null) {
-                    if (sdata.toLowerCase().equals(aLine.toLowerCase())) {
-                        for (int i = 1; i <= 5; i++) {
-                            ss[i + lastss] = br1.readLine();
-
-                        }
-                        lastss = lastss + 5;
-                    }
-                }
-                br1.close();
-            }
-            if ("".equals(sresult1.getText())) {
-                sresult1.setText("reached end of search");
-            }ind.setVisible(true);
-            sresult1.setText(ss[1]);sp1.setVisible(true);
-            sresult2.setText(ss[2]);sp2.setVisible(true);
-            sresult3.setText(ss[3]);sp3.setVisible(true);
-            sresult4.setText(ss[4]);sp4.setVisible(true);
-            sresult5.setText(ss[5]);sp5.setVisible(true);
-            lastd=lastd+5;
-            if(ss[6]!=null)
-            {
-                next.setVisible(true);
-                hider.setVisible(false);
-            }
-        }
-
-    }
-    int lastss = 0,lastd=0;
+    int lastss = 0, lastd = 0;
     int sno = 1;
     String ss[] = new String[200];
     int nextb = 1;
+
+    //class to search from DB(MySQL)
+    class SearchDB {
+
+        public SearchDB() throws SQLException, SQLException {
+            Connection conn;
+            //try {
+            // Class.forName("com.mysql.jdbc.Driver");
+            // } catch (ClassNotFoundException ex) {
+            //  Logger.getLogger(Search.class.getName()).log(Level.SEVERE, null, ex);
+            // }
+            String url = "jdbc:mysql://localhost:3306/patan_admin?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+            //conn = DriverManager.getConnection("jdbc:mysql://locathost:3306/patan_admin?serverTimezone=UTC", "root", "");
+            conn = DriverManager.getConnection(url, "admin", "");
+            Statement stmt = conn.createStatement();
+            String sql;
+            sql = "SELECT Name,Parent,Faculty,Department,Phone,Rollno FROM admission";
+            try (ResultSet rs = stmt.executeQuery(sql)) {
+                while (rs.next()) {
+                    if (!sbar.getText().equals("")) {
+                        if (rs.getString("Rollno").equals(sbar.getText())
+                            ||rs.getString("Parent").equals(sbar.getText())
+                            ||rs.getString("Faculty").equals(sbar.getText())
+                            ||rs.getString("Department").equals(sbar.getText())
+                            ||rs.getString("Phone").equals(sbar.getText()))
+                               {
+                            ss[1 + lastss] = rs.getString("Name");
+                            ss[2 + lastss] = rs.getString("Parent");
+                            ss[3 + lastss] = rs.getString("Faculty");
+                            ss[4 + lastss] = rs.getString("Department");
+                            ss[5 + lastss] = rs.getString("Phone");
+                            ss[6 + lastss] = rs.getString("Rollno");
+                            lastss = lastss + 6;
+                        }
+                    }
+                }
+            }
+            sresult1.setText(ss[1]);
+            sresult2.setText(ss[2]);
+            sresult3.setText(ss[3]);
+            sresult4.setText(ss[4]);
+            sresult5.setText(ss[5]);
+            sresult6.setText(ss[6]);
+            lastd = 6;
+        }
+
+    }
 }

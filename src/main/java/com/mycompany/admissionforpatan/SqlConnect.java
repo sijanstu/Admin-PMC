@@ -1,6 +1,5 @@
 package com.mycompany.admissionforpatan;
 
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -24,19 +23,20 @@ public class SqlConnect {
 
     String response;
     int retc = 0;
-    String convalue;
+    String url;
     String u, p;
     SqlConnect(String server, String port, String database, boolean unicode, boolean ugdbcc, boolean uldc, String zone, String user, String pass) throws SQLException, ClassNotFoundException, IOException {
-        //Class.forName("com.mysql.jdbc.Driver");  
+        //Class.forName("com.mysql.jdbc.Driver");//no need because already added in dependancy
         try{
         Connection con;
-        convalue = "jdbc:mysql://" + server + ":" + port + "/" + database + "?" + "useUnicode=" + unicode + "&useJDBCCompliantTimezoneShift=" + ugdbcc + "&useLegacyDatetimeCode=" + uldc + "&serverTimezone=" + zone;
+        url = "jdbc:mysql://" + server + ":" + port + "/" + database + "?" + "useUnicode=" + unicode + "&useJDBCCompliantTimezoneShift=" + ugdbcc + "&useLegacyDatetimeCode=" + uldc + "&serverTimezone=" + zone;
         u = user;
         p = pass;
         File f1=new File("C//SQLPMC");if(!f1.exists())f1.mkdirs();File f2=new File(f1+"/cofig.txt");if(!f2.exists())f2.createNewFile();
-        FileWriter fw=new FileWriter(f2);
-        
-        con = DriverManager.getConnection(convalue, user, pass);
+            try (FileWriter fw = new FileWriter(f2)) {
+                fw.write(url+"\n"+user+"\n"+pass);
+            }
+        con = DriverManager.getConnection(url, user, pass);
         if (con != null) {
             response = "Connected to server";
             con.close();
@@ -56,7 +56,7 @@ public class SqlConnect {
         switch (retc) {
             case 0:
                 retc++;
-                return convalue;
+                return url;
                
             case 1:
                 retc++;
@@ -70,6 +70,10 @@ public class SqlConnect {
     }
 
 }
+
+
+
+
 
 
 

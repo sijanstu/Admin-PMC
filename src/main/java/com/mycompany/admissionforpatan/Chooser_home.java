@@ -25,7 +25,7 @@ public class Chooser_home extends javax.swing.JFrame {
         initComponents();
         ImageIcon imgg = new ImageIcon("src\\main\\icons\\download.png");
         setIconImage(imgg.getImage());
-        ImageIcon img = new ImageIcon("src\\main\\icons\\YAZOO FREEWARE ICONS PHOTOSHOP.png");
+        ImageIcon img = new ImageIcon("src\\main\\icons\\status.png");
         jLabel9.setIcon(img);
         ImageIcon img1 = new ImageIcon("src\\main\\icons\\smooth_metal_png administrative-tools.png");
         jLabel10.setIcon(img1);
@@ -217,7 +217,7 @@ public class Chooser_home extends javax.swing.JFrame {
                 jLabel9MouseExited(evt);
             }
         });
-        p1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 140, 120));
+        p1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(-140, 0, 400, 210));
 
         jPanel1.add(p1, new org.netbeans.lib.awtextra.AbsoluteConstraints(4, 49, 220, 120));
 
@@ -483,7 +483,7 @@ public class Chooser_home extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tempus Sans ITC", 0, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 51, 255));
         jLabel1.setText("Welcome To Patan Multiple Campus App");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 420, 30));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, 420, 30));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 255));
@@ -493,7 +493,7 @@ public class Chooser_home extends javax.swing.JFrame {
                 jLabel3MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 20, 80, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 20, 80, -1));
 
         bckbtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -506,7 +506,7 @@ public class Chooser_home extends javax.swing.JFrame {
                 bckbtnMouseExited(evt);
             }
         });
-        jPanel1.add(bckbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 30));
+        jPanel1.add(bckbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 50, 40));
 
         frbt.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -519,7 +519,7 @@ public class Chooser_home extends javax.swing.JFrame {
                 frbtMouseExited(evt);
             }
         });
-        jPanel1.add(frbt, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 0, 40, 30));
+        jPanel1.add(frbt, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 0, 50, 40));
 
         jSeparator22.setBackground(new java.awt.Color(0, 0, 255));
         jSeparator22.setForeground(new java.awt.Color(0, 0, 255));
@@ -537,16 +537,16 @@ public class Chooser_home extends javax.swing.JFrame {
         jSeparator25.setBackground(new java.awt.Color(0, 0, 255));
         jSeparator25.setForeground(new java.awt.Color(0, 0, 255));
         jSeparator25.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jPanel1.add(jSeparator25, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 20, 10, 20));
+        jPanel1.add(jSeparator25, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 20, 10, 20));
 
         jSeparator28.setBackground(new java.awt.Color(0, 0, 255));
         jSeparator28.setForeground(new java.awt.Color(0, 0, 255));
         jSeparator28.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jPanel1.add(jSeparator28, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 20, 10, 20));
+        jPanel1.add(jSeparator28, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 20, 10, 20));
 
         jSeparator29.setBackground(new java.awt.Color(0, 0, 255));
         jSeparator29.setForeground(new java.awt.Color(0, 0, 255));
-        jPanel1.add(jSeparator29, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 20, 90, 10));
+        jPanel1.add(jSeparator29, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 20, 90, 10));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 670, 350));
 
@@ -625,24 +625,24 @@ public class Chooser_home extends javax.swing.JFrame {
 
     private void frbtMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_frbtMouseEntered
         // TODO add your handling code here:
-        frbt.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(153, 255, 153), new java.awt.Color(0, 153, 153), new java.awt.Color(204, 255, 204), null));
+      //  frbt.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(153, 255, 153), new java.awt.Color(0, 153, 153), new java.awt.Color(204, 255, 204), null));
 
     }//GEN-LAST:event_frbtMouseEntered
 
     private void frbtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_frbtMouseExited
         // TODO add your handling code here:
-        frbt.setBorder(null);
+        //frbt.setBorder(null);
     }//GEN-LAST:event_frbtMouseExited
 
     private void bckbtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bckbtnMouseEntered
         // TODO add your handling code here:
-        bckbtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(153, 255, 153), new java.awt.Color(0, 153, 153), new java.awt.Color(204, 255, 204), null));
+       // bckbtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(153, 255, 153), new java.awt.Color(0, 153, 153), new java.awt.Color(204, 255, 204), null));
 
     }//GEN-LAST:event_bckbtnMouseEntered
 
     private void bckbtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bckbtnMouseExited
         // TODO add your handling code here:
-        bckbtn.setBorder(null);
+       // bckbtn.setBorder(null);
     }//GEN-LAST:event_bckbtnMouseExited
 
     private void p2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p2MousePressed
