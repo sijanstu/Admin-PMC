@@ -526,8 +526,15 @@ boolean firstlogenter = true;
 
 class Voicespeaker {
     //0 means male voice and 1 means female voice
+    
+    public static final int MALE = 0;
+    public static final int FEMALE = 1;
 
-    Voicespeaker(String vv, int gender) {
+    /**
+    @param msg Message to speak
+    @param gender Choose Male or Female voice (e.g VoiceSpeaker.MALE or VoiceSpeaker.FEMALE)
+    */
+    Voicespeaker(String msg, int gender) {
         FileWriter f8;
         int g = gender;
         try {
@@ -537,7 +544,7 @@ class Voicespeaker {
             f7.delete();//deleting previous voice file
             f8 = new FileWriter("D://voice.txt");
 
-            f8.append("Set Sapi = Wscript.CreateObject(\"SAPI.SpVoice\")\nSet sapi.Voice = sapi.GetVoices.Item(" + g + ")\nsapi.Rate=\nSapi.speak \"" + vv + "\"");
+            f8.append("Set Sapi = Wscript.CreateObject(\"SAPI.SpVoice\")\nSet sapi.Voice = sapi.GetVoices.Item(" + g + ")\nsapi.Rate=\nSapi.speak \"" + msg + "\"");
             f8.close();
             File f = new File("D://voice.txt");
             File fg = new File("D://voice.vbs");
